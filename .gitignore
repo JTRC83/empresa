@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# Obsidian user-specific
+.obsidian/workspace.json
+.obsidian/graph.json
+.obsidian/workspace-mobile.json
+.obsidian/workspaces.json
+
+# Logs
+*.log
+
+# Temp files
+*.tmp
+*.swp
+*~
