@@ -1,0 +1,29 @@
+filters:
+  or:
+    - file.inFolder("01 - Diagnóstico y Evaluación")
+    - file.inFolder("02 - Proceso Creativo")
+    - file.inFolder("03 - Estrategia de Marca")
+    - file.inFolder("04 - Naming y Tagline")
+    - file.inFolder("05 - Arquitectura de Negocio")
+    - file.inFolder("99 - Archivo")
+    - file.inFolder("Conceptos")
+    - file.inFolder("06 - Proyectos")
+properties:
+  category:
+    displayName: Categoría
+  tags:
+    displayName: Etiquetas
+views:
+  - type: table
+    name: Tabla
+    order:
+      - file.name
+      - category
+      - tags
+      - file.mtime
+  - type: cards
+    name: Tarjetas
+    order:
+      - file.name
+      - category
+      - tags

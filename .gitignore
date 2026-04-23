@@ -14,3 +14,6 @@
 *.tmp
 *.swp
 *~
+
+# Agent infrastructure
+.atl/
