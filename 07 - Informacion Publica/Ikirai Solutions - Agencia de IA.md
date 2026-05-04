@@ -79,6 +79,11 @@ Aplicacion web a medida donde el cliente ve en tiempo real:
 > Ikirai es la agencia que lo ejecuta. El [[Manifesto - La red es el todo|manifiesto]]
 > y la [[Metodologia - 5 pasos SOM-U|metodologia de 5 pasos]] se aplican a traves de Ikirai.
 
+## Equipo
+
+- [[Perfil Publico - Adrian Colom Palacios|Adrian Colom]] — Arquitecto de Soluciones IA, founder
+- [[Joan Toni Ramon Crespi - Socio|Joan Toni Ramon Crespi]] — Desarrollo web, IA Generativa, fotografia
+
 ## Relaciones
 
 - [[Perfil Publico - Adrian Colom Palacios]] — el founder

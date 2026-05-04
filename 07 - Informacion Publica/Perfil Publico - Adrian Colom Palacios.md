@@ -69,6 +69,7 @@ Citado en ikiraisolutions.com como frase del founder.
 ## Relaciones
 
 - [[Ikirai Solutions - Agencia de IA]] — su agencia de automatizacion
+- [[Joan Toni Ramon Crespi - Socio]] — socio en el ecosistema SOM-U
 - [[Presencia Digital - Redes y plataformas]] — todas sus redes sociales
 - [[Proyectos Publicos - URLs y estado]] — proyectos con URLs publicas
 - [[Insight de Origen - Tecnologia como refugio]] — la historia detras de la marca

@@ -37,6 +37,7 @@ scope: vault
 │   ├── 📄 Valor Balear.md
 ├── 📁 07 - Informacion Publica/
 │   ├── 📄 Ikirai Solutions - Agencia de IA.md
+│   ├── 📄 Joan Toni Ramon Crespi - Socio.md
 │   ├── 📄 Perfil Publico - Adrian Colom Palacios.md
 │   ├── 📄 Presencia Digital - Redes y plataformas.md
 │   ├── 📄 Proyectos Publicos - URLs y estado.md
@@ -105,9 +106,10 @@ scope: vault
 - [[06 - Proyectos/GenLegalTxts|GenLegalTxts]] — - Plataforma web para generar textos legales personalizados para sitios web
 - [[06 - Proyectos/Valor Balear|Valor Balear]] — Los productos baleares están **desconectados** de las redes sociales y del alcance digital. Gente de fuera de las isl...
 
-## 07 - Informacion Publica (4)
+## 07 - Informacion Publica (5)
 
 - [[07 - Informacion Publica/Ikirai Solutions - Agencia de IA|Ikirai Solutions - Agencia de IA]] — Agencia de IA, chatbots y automatizacion fundada por Adrian Colom. Opera bajo la metodologia Kita System.
+- [[07 - Informacion Publica/Joan Toni Ramon Crespi - Socio|Joan Toni Ramon Crespi - Socio]] — Joan Toni Ramon Crespi, socio de Adrian Colom en la construccion de la marca SOM-U. Desarrollador web, especialista e...
 - [[07 - Informacion Publica/Perfil Publico - Adrian Colom Palacios|Perfil Publico - Adrian Colom Palacios]] — Informacion publica sobre Adrian Colom Palacios recopilada de su web personal, redes sociales y presencia digital.
 - [[07 - Informacion Publica/Presencia Digital - Redes y plataformas|Presencia Digital - Redes y plataformas]] — Todas las plataformas y redes sociales donde Adrian Colom Palacios tiene presencia publica activa.
 - [[07 - Informacion Publica/Proyectos Publicos - URLs y estado|Proyectos Publicos - URLs y estado]] — Lista completa de proyectos con URLs publicas, estado actual y stack tecnologico.
