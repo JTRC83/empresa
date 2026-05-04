@@ -32,10 +32,17 @@ Cada carpeta tiene un `index.md` auto-generado con arbol, descripciones y tags.
 # 1. Instalar dependencias
 npm install
 
-# 2. Levantar Qdrant (busqueda semantica)
+# 2. Configurar API keys (crea .env desde .env.template)
+#    TAVILY_API_KEY=...  (busqueda web)
+#    OPENROUTER_API_KEY=... (opcional, LLM alternativo)
+
+# 3. Arrancar (carga .env automaticamente)
+node start.mjs
+
+# 4. Levantar Qdrant (busqueda semantica)
 docker compose up -d
 
-# 3. Sync del vault a Qdrant (local, gratis, sin API key)
+# 5. Sync del vault a Qdrant (local, gratis, sin API key)
 EMBEDDING_PROVIDER=transformers node tools/qdrant-sync.mjs
 ```
 

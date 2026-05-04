@@ -16,10 +16,6 @@
   // Model for lightweight tasks (title generation, summaries)
   "small_model": "opencode-go/deepseek-v4-flash",
 
-  // ─── Instructions ─────────────────────────────────────────────────────────
-  // El AGENTS.md define al Knowledge Manager del vault SOM-U
-  "instructions": ["AGENTS.md"],
-
   // ─── MCP Servers ────────────────────────────────────────────────────────────
   // Remote MCPs (always available, no local setup)
   "mcp": {

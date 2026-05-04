@@ -18,6 +18,10 @@
 # Node
 node_modules/
 
+# Environment (API keys — NEVER commit)
+.env
+.env.local
+
 # Qdrant data (local Docker volumes)
 qdrant_data/
 
