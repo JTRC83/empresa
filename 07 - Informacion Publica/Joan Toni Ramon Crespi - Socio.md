@@ -26,7 +26,6 @@ source: "LinkedIn, Tavily search"
 - **Nombre completo**: Joan Toni Ramon Crespi
 - **Ubicacion**: Inca, Mallorca (Area metropolitana de Palma)
 - **LinkedIn**: [/in/joan-toni-ramon-crespi-b4082a39](https://es.linkedin.com/in/joan-toni-ramon-crespi-b4082a39)
-- **Instagram**: [@joancrespiramon](https://www.instagram.com/joancrespiramon/) (1.2K+ seguidores)
 - **Conexiones LinkedIn**: ~115
 
 ## Perfil profesional
