@@ -1,0 +1,21 @@
+{
+  "name": "som-u-vault",
+  "private": true,
+  "description": "SOM-U brand strategy vault — Obsidian knowledge base with AI tooling",
+  "type": "module",
+  "scripts": {
+    "index": "node tools/generate-index.mjs",
+    "qdrant-sync": "node tools/qdrant-sync.mjs",
+    "qdrant-search": "node tools/qdrant-sync.mjs --search",
+    "qdrant-watch": "node tools/qdrant-sync.mjs --watch"
+  },
+  "dependencies": {
+    "@huggingface/transformers": ">=3"
+  },
+  "devDependencies": {
+    "@qdrant/js-client-rest": ">=1.13"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

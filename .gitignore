@@ -15,5 +15,11 @@
 *.swp
 *~
 
+# Node
+node_modules/
+
+# Qdrant data (local Docker volumes)
+qdrant_data/
+
 # Agent infrastructure
 # .atl/  — incluido en repo por requerimiento

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  // ─── Agents ────────────────────────────────────────────────────────────────
+  // Knowledge Manager: consulta, investiga, analiza y crea conocimiento
+  "agent": {
+    "knowledge-manager": {
+      "description": "Knowledge Manager del vault SOM-U. Consulta, investiga, analiza y crea conocimiento de marca usando indices para token efficiency y Qdrant para busqueda semantica.",
+      "model": "opencode-go/deepseek-v4-pro",
+      "prompt": "{file:./AGENTS.md}"
+    }
+  },
+
+  // Default agent
+  "default_agent": "knowledge-manager",
+  // Model for lightweight tasks (title generation, summaries)
+  "small_model": "opencode-go/deepseek-v4-flash",
+
+  // ─── Instructions ─────────────────────────────────────────────────────────
+  // El AGENTS.md define al Knowledge Manager del vault SOM-U
+  "instructions": ["AGENTS.md"],
+
+  // ─── MCP Servers ────────────────────────────────────────────────────────────
+  // Remote MCPs (always available, no local setup)
+  "mcp": {
+    // Context7 — search library docs (free)
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": true
+    },
+    // Engram — persistent memory for agents (local)
+    "engram": {
+      "type": "local",
+      "command": ["engram", "mcp", "--tools=agent"],
+      "enabled": true
+    },
+    // Puppeteer — browser automation (local)
+    "puppeteer": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-puppeteer"],
+      "enabled": true
+    },
+    // Tavily — web search, extract, crawl (remote MCP)
+    "tavily": {
+      "type": "remote",
+      "url": "https://mcp.tavily.com/mcp/?tavilyApiKey={env:TAVILY_API_KEY}",
+      "enabled": true
+    }
+  }
+}
