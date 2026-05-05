@@ -43,6 +43,8 @@ scope: vault
 │   ├── 📄 Proyectos Publicos - URLs y estado.md
 ├── 📁 08 - Clientes/
 │   ├── 📄 Nemus Arboricultura.md
+├── 📁 09 - Propuestas/
+│   ├── 📄 Nemus Digital.md
 ├── 📁 99 - Archivo/
 │   ├── 📄 BREAFING_MARCA_0002 (1).md
 ├── 📁 Conceptos/
@@ -119,6 +121,10 @@ scope: vault
 ## 08 - Clientes (1)
 
 - [[08 - Clientes/Nemus Arboricultura|Nemus Arboricultura - Empresa de arboricultura en Mallorca]] — Investigación sobre Nemus Arboricultura y Formación S.L., empresa de arboricultura y formación profesional con sede e...
+
+## 09 - Propuestas (1)
+
+- [[09 - Propuestas/Nemus Digital|Propuesta Nemus Digital — Sistema de gestión de arboricultura y formaciones]] — Propuesta de sistema digital para Nemus Arboricultura: digitalización del flujo de trabajo de campo (fichas, presupue...
 
 ## 99 - Archivo (1)
 
