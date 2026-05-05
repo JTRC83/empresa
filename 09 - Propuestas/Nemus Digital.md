@@ -126,8 +126,8 @@ Aprueba o rechaza
   └── Rechazado → Vuelve a presupuesto con anotaciones
 ```
 
-> [!warning] Pendiente de definir
-> ¿Se notifica al cliente en este punto? ¿Se envía el presupuesto por email? ¿Se necesita firma digital del cliente?
+> [!note] Confirmado
+> Al aprobar, se notifica al cliente por email automáticamente.
 
 ### 4. Ejecución del trabajo
 
@@ -225,8 +225,8 @@ Envía email con:
 Automáticamente se crea el cliente/lead en el CRM
 ```
 
-> [!warning] Pendiente de definir
-> ¿El PDF se genera desde cero con código (ej: Puppeteer + HTML) o se parte de una plantilla PDF que ellos ya tienen y se rellenan campos? ¿Quién diseña la plantilla del PDF?
+> [!note] Confirmado
+> PDF generado desde cero con código (HTML → PDF vía Puppeteer). Plantilla a diseñar.
 
 ### 3. Formulario de información general + IA
 
@@ -301,8 +301,8 @@ Se envía por email al alumno
 Queda registrado en su perfil del CRM
 ```
 
-> [!warning] Pendiente de definir
-> ¿El certificado lleva firma del instructor? ¿Logo de la AEA? ¿Diseño específico o plantilla estándar?
+> [!note] Confirmado
+> El certificado lleva firma del instructor y logo de la AEA (Asociación Española de Arboricultura).
 
 ---
 
@@ -390,8 +390,10 @@ Basado en [[Foundation]]: monorepo Turborepo + pnpm, NestJS backend, Nuxt fronte
 ### Fase 5 — Pulido y cliente (continuo)
 - [ ] Portal de cliente (ver estado de sus trabajos)
 - [ ] Exportación de reportes
-- [ ] Integración con email de Nemus (info@nemusarboricultura.com)
 - [ ] Dashboard de métricas (trabajos/mes, formaciones más demandadas, etc.)
+
+> [!note] Facturación
+> Va por fuera de la app. No se integra en este sistema.
 
 ---
 
