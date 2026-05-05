@@ -305,6 +305,306 @@ pnpm test                         # Jest
 
 ## Hallazgos y Estado
 
+## Inventario de componentes
+
+> [!tip] Catálogo completo de activos reutilizables
+> Todo lo que Foundation ofrece para construir proyectos nuevos. Mantener actualizado al añadir/quitar componentes.
+
+### Frontend — Componentes Vue/Nuxt
+
+#### Kanban (drag & drop completo)
+| Componente | Ubicación | Descripción |
+|------------|-----------|-------------|
+| `Kanban.vue` | `modules/base/ui-app/components/kanban/` | Tablero principal: drag-drop de columnas, CRUD de tareas, checklist inline, tags, asignación |
+| `KanbanColumn.vue` | 〃 | Columna con tareas arrastrables, límites WIP, color configurable |
+| `KanbanCard.vue` | 〃 | Tarjeta con título, tags, avatar del asignado, progreso checklist, prioridad, fecha límite |
+| `KanbanTag.vue` | 〃 | Badges de colores para tags |
+| `UserAvatar.vue` | 〃 | Avatar del usuario asignado |
+| `types.ts` | 〃 | Tipos: `KanbanTask` (id, title, description, stateId, tags, assignee, checklist, relatedTasks, priority, dueDate, comments), `KanbanStateConfig`, `KanbanTag`, `KanbanAssignee`, `KanbanChecklistItem`, `KanbanTaskLink` |
+
+#### Data Table (TanStack Table v8)
+| Componente | Ubicación | Descripción |
+|------------|-----------|-------------|
+| `DataTable.vue` | `modules/base/ui-app/components/data-table/` | Wrapper TanStack v8: sorting, filtrado, paginación server-side, auto-fetch, persistencia de estado |
+| `DataTableColumnHeader.vue` | 〃 | Cabecera ordenable con indicador de dirección |
+| `DataTableComboboxFilter.vue` | 〃 | Filtro facetado combobox |
+| `SortableHeader.vue` | 〃 | Cabecera ordenable simple |
+| `DeleteButton.vue` | 〃 | Botón de acción eliminar |
+| `EditButton.vue` | 〃 | Botón de acción editar |
+| `ViewButton.vue` | 〃 | Botón de acción ver |
+| `TableActionMenu.vue` | `components/ui/` | Menú contextual inteligente (viewport-aware, teleported) |
+
+#### Form Components (11 componentes, vee-validate + Zod)
+| Componente | Tipos soportados |
+|------------|-----------------|
+| `FormInput.vue` | text, number, email, password. Label, required, error, description, icon slots, disabled |
+| `FormSelect.vue` | Select dropdown |
+| `FormSearchSelect.vue` | Select con búsqueda |
+| `FormMultipleSelect.vue` | Multi-select |
+| `FormDate.vue` | Date picker |
+| `FormTime.vue` | Time input |
+| `FormTextArea.vue` | Textarea |
+| `FormFile.vue` | Upload de archivo único |
+| `FormMultipleFile.vue` | Upload múltiple |
+| `FormSwitch.vue` | Toggle switch |
+| `FormPassword.vue` | Password con toggle visibilidad |
+
+#### Rich Editor (TipTap v3)
+| Componente | Features |
+|------------|----------|
+| `RichEditor.vue` | StarterKit, Link. Toolbar: bold, italic, headings, lists, quote, code, link, undo/redo |
+| `RichEditorAdvanced.vue` | StarterKit, Link, Image, Highlight, TextAlign, Typography, Table, Placeholder. Toolbar con 30+ iconos |
+
+#### Calendar (4 vistas)
+| Componente | Descripción |
+|------------|-------------|
+| `Calendar.vue` | Calendario principal con gestión de eventos |
+| `CalendarMonthView.vue` | Vista mensual |
+| `CalendarWeekView.vue` | Vista semanal |
+| `CalendarDayView.vue` | Vista diaria |
+| `CalendarEvent.vue` | Tarjeta de evento |
+| `CalendarToolbar.vue` | Navegación (anterior/siguiente/hoy) |
+| `useCalendar.ts` | Composable de estado del calendario |
+
+#### Auth System
+| Componente | Descripción |
+|------------|-------------|
+| `AuthLayout.vue` | Layout centrado tipo tarjeta para auth |
+| `AuthSignIn.vue` | Login (email + password + social) |
+| `AuthSignUp.vue` | Registro |
+| `AuthForgotPassword.vue` | Recuperar contraseña |
+| `AuthResetPassword.vue` | Resetear contraseña |
+| Páginas: `login.vue`, `register.vue`, `forgot-password.vue`, `password-change.vue` | |
+
+#### Layout & Navegación
+| Componente | Descripción |
+|------------|-------------|
+| `layouts/default.vue` | Shell principal: sidebar + header + contenido |
+| `layouts/blank.vue` | Layout mínimo para auth |
+| `AppSidebar.vue` | Sidebar colapsable con grupos de navegación |
+| `Header.vue` | Barra superior con búsqueda, idioma, menú usuario |
+| `NavUser.vue` | Dropdown de usuario (perfil, ajustes, logout) |
+| `SidebarNavGroup.vue` | Grupo de navegación colapsable |
+| `SidebarNavLink.vue` | Link de navegación con icono y estado activo |
+| `TokenProgress.vue` | Barra de cuenta atrás de expiración JWT |
+| `BreadcrumbCustom.vue` | Migas de pan dinámicas |
+
+#### User Management
+| Componente | Descripción |
+|------------|-------------|
+| `UserFormDialog.vue` | Modal crear/editar usuario |
+| `UserPasswordDialog.vue` | Modal cambiar contraseña |
+| `UserRoleDialog.vue` | Modal asignar rol |
+
+#### Landing Page (15 componentes)
+`LandingHero`, `LandingFeatures`, `LandingHowItWorks`, `LandingServices`, `LandingPricing`, `LandingTestimonials`, `LandingTeam`, `LandingFAQ`, `LandingContact`, `LandingFooter`, `LandingNavbar`, `LandingBenefits`, `LandingCommunity`, `LandingSponsors`, `LandingToggleTheme`
+
+#### CMS
+| Componente | Descripción |
+|------------|-------------|
+| `RichEditorAdvanced.vue` | Editor TipTap avanzado para contenido |
+| `CmsSeoCard.vue` | Formulario de metadatos SEO |
+| `CmsSeoMeta.vue` | Renderizador de meta tags SEO |
+| `CmsEntityTranslationsTable.vue` | Tabla de traducciones por entidad |
+| `TranslationPanel.vue` | Panel de gestión de traducciones |
+| `TranslationFields.vue` | Campos por idioma |
+| `SortablePageList.vue` | Ordenación drag-drop de páginas |
+| `PreviewButton.vue` | Toggle modo preview |
+| `AuthorBadge.vue` | Badge de autor |
+| `SchemaOrg.vue` | Renderizado JSON-LD |
+| Páginas CRUD: pages, blog posts, categories, tags (create/index/edit) | |
+
+#### Error Tracking UI
+| Componente | Descripción |
+|------------|-------------|
+| `ErrorDashboard.vue` | Dashboard de errores con filtros y paginación |
+| `pages/admin/errors.vue` | Página de monitorización |
+
+#### Otros Componentes
+| Componente | Descripción |
+|------------|-------------|
+| `AutoComplete.vue` | Input con autocompletado |
+| `DateRangePicker.vue` | Selector de rango de fechas |
+| `Kbd.vue` | Badge de atajo de teclado |
+| `ColorButton.vue` | Selector de color |
+| `FlagIcon.vue` | Bandera de país |
+| `LangButton.vue` | Selector de idioma |
+| `NavSearch.vue` | Búsqueda en navbar |
+| `TeamSwitcher.vue` | Selector de equipo/organización |
+| `GooglePlacesAutocomplete.vue` | Integración Google Places |
+| `AppLogo.vue`, `AppLogoIcon.vue`, `AppIcon.vue` | Componentes de branding |
+| `PasswordInput.vue` | Password con toggle |
+| `TranslationDevToggle.vue` | Toggle modo dev traducciones |
+| `InteractiveTranslationEditor.vue` | Editor inline de traducciones |
+| Páginas error: `401`, `403`, `404`, `500`, `503` | |
+
+---
+
+### Frontend — Stores, Composables y Middleware
+
+#### Pinia Stores
+| Store | Archivo | Propósito |
+|-------|---------|-----------|
+| `useAuthStore` | `auth.store.ts` | JWT, refresh, user, `isAdmin`/`isCustomer` getters, login/logout/register/refresh/me, persistido |
+| `useTableStateStore` | `useTableState.ts` | Persiste estado de tablas (sorting, filtros, página) por nombre de tabla |
+
+#### Composables (16)
+| Composable | Propósito |
+|------------|-----------|
+| `useUsers.ts` | CRUD de usuarios |
+| `useNavMenu.ts` | Construcción dinámica del menú |
+| `useSeo.ts` (×2) | Gestión de metadatos SEO |
+| `useGoogleMaps.ts` | Integración Google Maps |
+| `useShortcuts.ts` | Registro de atajos de teclado |
+| `defineShortcuts.ts` | Helper para definir atajos |
+| `useCmsPages.ts` | Páginas CMS |
+| `useCmsBlogPosts.ts` | Posts del blog |
+| `useCmsCategories.ts` | Categorías |
+| `useCmsTags.ts` | Tags |
+| `useTranslations.ts` | Gestión de traducciones |
+| `useErrors.ts` | Error tracker |
+| `useHomeRoute.ts` | Ruta home según rol |
+| `useCalendar.ts` | Estado del calendario |
+| `useSchema.ts` | Datos Schema.org |
+
+#### Middleware
+| Middleware | Tipo | Propósito |
+|------------|------|-----------|
+| `admin.global.ts` | Global | Protege `/app/*` → login si no auth, 403 si no admin |
+| `auth.ts` | Nombrado | Protege rutas autenticadas |
+| `guest.ts` | Nombrado | Redirige usuarios autenticados fuera de páginas públicas |
+
+#### Plugins
+| Plugin | Propósito |
+|--------|-----------|
+| `auth.client.ts` | Inicialización de auth al arrancar (refresh token, fetch user) |
+| `error-handler.client.ts` | Captura global de errores (Vue, unhandled rejections, script errors) |
+| `vue-query.ts` | Setup de TanStack Query |
+| `dev-i18n.ts` | Toggle modo dev traducciones |
+| `zod-locale.ts` | Zod en español |
+| `nav.ts` (×4) | Registro de items de menú por módulo |
+
+#### Helpers
+| Archivo | Propósito |
+|---------|-----------|
+| `fetch-wrapper.js` | Cliente HTTP: auto `Authorization`, refresh de token en 401 con cola, GET/POST/PUT/PATCH/DELETE |
+
+---
+
+### Backend — Módulos y Servicios NestJS
+
+#### IAM — Identity & Access Management (`modules/iam/`)
+| Módulo | Funcionalidad |
+|--------|---------------|
+| **auth** | Login email/password, registro, refresh tokens, forgot/reset password, confirmación email, perfil, logout |
+| **auth-google** | OAuth2 Google |
+| **auth-facebook** | OAuth Facebook |
+| **auth-apple** | Sign In Apple |
+| **api-keys** | Generación (hasheadas), listado, revocación — una key por usuario |
+| **session** | Gestión de sesiones con hash SHA256, rotación de refresh tokens, soft delete |
+| **roles** | RBAC: `admin` (id:1), `customer` (id:2). `RolesGuard`, `@Roles()` decorator |
+
+**Decoradores de auth** (`@iam/auth/decorators/auth.decorator.ts`):
+| Decorador | Comportamiento |
+|-----------|---------------|
+| `@JwtAuth()` | Solo JWT |
+| `@ApiKeyAuth()` | Solo API key |
+| `@FlexibleAuth()` | JWT o API key |
+| `@OptionalAuth()` | JWT, API key o anónimo |
+| `@AdminAuth()` | JWT + rol admin |
+| `@CustomerAuth()` | JWT + rol customer |
+| `@CurrentUser()` | Extrae `req.user` |
+
+#### Users (`modules/users/`)
+- CRUD completo con paginación, filtrado por rol/status/email
+- Estados: activo/inactivo
+- DDD: entidades de dominio, DTOs, patrón repositorio
+
+#### Storage / Archivos (`modules/storage/`)
+- **Attachments polimórficos**: `FileEntity` con `entityName` + `entityId`
+- **Drivers**: Local (filesystem), S3, S3 con presigned URLs
+- **Procesamiento de imágenes**
+- **Auto-cleanup**: `GlobalFileCleanupSubscriber` elimina archivos huérfanos
+- **Filtrado** por tipo de entidad/ID, público/privado
+
+#### Communications (`modules/communications/`)
+| Servicio | Propósito |
+|----------|-----------|
+| `MailService` | Alto nivel: `userSignUp`, `forgotPassword`, `confirmNewEmail` |
+| `MailerService` | Bajo nivel: wrapper Nodemailer |
+| `QueuedMailerService` | Asíncrono vía BullMQ + Redis, fallback a síncrono |
+| `EmailService` | Gestión de cola de emails |
+| `HomeService` | Endpoint health/home |
+
+#### Billing (`modules/billing/`)
+`StripeService`: listado de planes, crear/obtener customer, checkout sessions, portal sessions, webhooks
+
+#### Error Tracker (`modules/error-tracker/`)
+- Global exception filter (HTTP 500+)
+- Deduplicación SHA256 (message + source + stack)
+- Contador de ocurrencias
+- Notificación Telegram (opcional, umbral configurable)
+- Process listeners: `unhandledRejection`, `uncaughtException`
+
+#### Translations (`modules/translations/`)
+- Traducciones en DB con `TranslationEntity`
+- Gestión de idiomas vía `LangEntity`
+- Operaciones batch
+- `TranslationAgentService` para traducción asistida por IA
+- CLI tools
+
+#### CMS Extensions (`extensions/cms/`)
+| Módulo | Features |
+|--------|----------|
+| **pages** | CRUD con templates (landing/generic/contact), SEO, traducciones, ordenación |
+| **blog/posts** | CRUD con traducciones, tags, categorías, workflow draft/publish |
+| **blog/categories** | CRUD |
+| **blog/tags** | CRUD |
+| **seo** | Metadatos SEO por entidad |
+| **media** | Upload con entity linking |
+| **sitemap** | Generación dinámica de sitemap.xml |
+
+#### Utilidades Backend (`infrastructure/utils/`)
+| Utilidad | Propósito |
+|----------|-----------|
+| `infinity-pagination.ts` | Paginación con `hasNextPage` |
+| `parse-filter.ts` | Query string → objeto filtro |
+| `serializer.interceptor.ts` | Entidad → DTO |
+| `slugify.ts` | Generación de slugs |
+| `validate-config.ts` | Validación de configuración |
+| `deep-resolver.ts` | Resolución profunda de objetos |
+| `relational-entity-helper.ts` | Helpers para relaciones TypeORM |
+| `lower-case.transformer.ts` | Transformer de columna TypeORM |
+| Tipos: `NullableType`, `MaybeType`, `OrNeverType`, `DeepPartialType`, `PaginationOptions` | |
+
+#### Core System (`core/`)
+| Archivo | Propósito |
+|---------|-----------|
+| `extension-loader.ts` | Auto-descubre módulos de `extensions/` |
+| `extension-conflict-detector.ts` | Detecta colisiones entre extensiones |
+| `extension-dependency-resolver.ts` | Resuelve orden de carga por dependencias |
+| `extension-manifest.types.ts` | Tipos de manifiesto de extensión |
+| `config-loader.ts` | Descubre configs de extensiones |
+| `seed-loader.ts` | Descubre seeds de extensiones |
+
+#### Entidades (15 total)
+`UserEntity`, `RoleEntity`, `SessionEntity`, `FileEntity`, `FileCleanupErrorEntity`, `ApiKeyEntity`, `StatusEntity`, `TranslationEntity`, `LangEntity`, `ErrorLogEntity`, `SeoMetadataEntity`, `PageEntity`, `BlogPostEntity`, `BlogCategoryEntity`, `PostTagEntity`
+
+---
+
+### Docker — Servicios
+| Servicio | Imagen | Puertos |
+|----------|--------|---------|
+| **postgres** | `postgres:17.4-alpine` | 5432 |
+| **redis** | `redis:7-alpine` | 6379 |
+| **mailpit** | `axllent/mailpit` | 8025 (UI), 1025 (SMTP) |
+| **backend** | Custom Dockerfile | 3001 |
+| **frontend** | Custom Dockerfile | 3000 |
+
+---
+
+## Hallazgos y Estado
+
 - ✅ Monorepo bien estructurado con separación clara de concerns
 - ✅ DDD en backend, Nuxt Layers en frontend
 - ✅ Sistema de extensiones listo pero no aprovechado
