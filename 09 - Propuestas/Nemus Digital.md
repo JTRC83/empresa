@@ -226,7 +226,7 @@ Automáticamente se crea el cliente/lead en el CRM
 ```
 
 > [!note] Confirmado
-> PDF generado desde cero con código (HTML → PDF vía Puppeteer). Plantilla a diseñar.
+> PDF generado desde cero con código (HTML → PDF vía **PDFMake**). Plantilla a diseñar.
 
 ### 3. Formulario de información general + IA
 
@@ -394,6 +394,101 @@ Basado en [[Foundation]]: monorepo Turborepo + pnpm, NestJS backend, Nuxt fronte
 
 > [!note] Facturación
 > Va por fuera de la app. No se integra en este sistema.
+
+---
+
+## Análisis crítico — Abogado del diablo
+
+> [!danger] Disclaimer
+> Esto no es para frenar el proyecto. Es para identificar agujeros **antes** de escribir código y evitar retrabajo. Cada punto tiene una propuesta de solución.
+
+### 🔴 Problemas detectados en Rama 1 (Trabajos)
+
+| # | Problema | Riesgo | Solución propuesta |
+|---|----------|--------|-------------------|
+| 1 | **Coste estimado vs presupuesto formal**: el trabajador dice una cifra, el colaborador pone otra. No hay paso de reconciliación. | El cliente recibe dos números distintos. Desconfianza. | Añadir campo "nota del colaborador" si el presupuesto difiere del estimado. Ocultar el estimado al cliente, solo mostrar el formal. |
+| 2 | **Aprobación solo interna**: el flujo actual aprueba el colaborador, pero ¿y el cliente? ¿No tiene que aceptar el presupuesto? | Se ejecuta un trabajo sin que el cliente haya dicho que sí al precio. | Añadir estado "Pendiente aceptación del cliente" entre "Aprobado" y "En ejecución". El email de aprobación incluye un botón "Aceptar presupuesto". |
+| 3 | **Autónomo no puede crear fichas**: según permisos, solo ve sus tareas asignadas. Pero un autónomo también hace visitas y debería poder crear fichas. | O la empresa pierde capacidad de captación, o el autónomo llama por teléfono (lo mismo de ahora). | El autónomo puede crear fichas desde visita, pero con visibilidad limitada: solo ve las suyas propias + las que le asignen. |
+| 4 | **Checklists mutables sin control**: se pueden añadir/quitar items en cada ficha. ¿Qué pasa si la plantilla de "Poda" cambia? ¿Se actualizan las fichas en curso? | Fichas con checklist desactualizado. Inconsistencia entre trabajadores. | Las fichas heredan la plantilla en el momento de creación. Los cambios posteriores a la plantilla no afectan fichas existentes (snapshot). Si un colaborador quiere actualizar una ficha concreta, lo hace manualmente. |
+| 5 | **Materiales en texto libre**: "solo anotación" → cada trabajador escribe como quiere. "Cuerda 12mm", "cuerda 12 mm", "cuerda 1.2cm"... | Datos inservibles para análisis. Imposible saber cuánta cuerda se gasta al mes. | Lista predefinida de materiales (configurable por admin) + campo "cantidad". Se puede añadir material nuevo si no existe. Texto libre solo como nota adicional. |
+| 6 | **Kanban sin validación de transiciones**: arrastrar una tarjeta de "Pendiente revisión" a "Completado" no debería ser posible. | Saltos de estado ilegales. Caos. | Definir matriz de transiciones válidas. El kanban solo permite drops en columnas válidas para el estado actual. |
+| 7 | **Fichas estancadas sin alerta**: una ficha en "Pendiente revisión" 5 días. Nadie se entera. | El cuello de botella actual (Carolina) se traslada a la app. | Notificación automática si una ficha lleva >48h en el mismo estado. Escalar a admin si >72h. |
+
+### 🔴 Problemas detectados en Rama 2 (Formaciones)
+
+| # | Problema | Riesgo | Solución propuesta |
+|---|----------|--------|-------------------|
+| 8 | **Inscripción sin cuenta**: el cliente hace clic en "Inscribirse" desde el email. ¿Necesita crear cuenta en la app? Si no, ¿cómo rastreamos quién es? | Sin cuenta = sin CRM = sin seguimiento. O fricción de registro = abandono. | Inscripción con token único en la URL (ej: `/inscribirse?token=abc123&curso=42`). Sin registro previo. Solo confirma datos. Se crea cuenta automáticamente en background. |
+| 9 | **IA con LLM por cada pregunta**: si cada consulta al formulario FAQ dispara una llamada a OpenAI, el coste se dispara. | 100 preguntas/mes = manejable. 1000+ = coste significativo. | Primera capa: keyword matching contra catálogo (rápido, gratis). Si no hay match claro → segunda capa: embedding similarity. Si aún no está claro → LLM. El 80% de preguntas se resuelven en capa 1. |
+| 10 | **Fuzzy matching poco fiable con texto libre**: "curso de podar arboles" vs "Curso de poda de árboles". Levenshtein no basta. | Falsos negativos: se crean entradas duplicadas en la bolsa. Datos inservibles. | Usar embeddings (text-embedding-3-small o similar) para comparar similitud semántica. Umbral de 0.85 para considerar que es la misma formación. |
+| 11 | **La IA no conoce el catálogo en tiempo real**: si el admin añade un curso nuevo, la IA necesita saberlo. | Responde que no existe cuando sí existe. | Sincronización automática: cada vez que se crea/modifica/elimina un curso, se regenera el índice de búsqueda (vector store o índice en memoria). |
+| 12 | **Duplicados en CRM**: mismo email rellena formulario FAQ y formulario PDF → dos leads. | CRM sucio. Carolina se vuelve loca. | Detección por email: si ya existe, se añade la nueva interacción al historial del lead existente en vez de crear uno nuevo. |
+| 13 | **PDFs grandes como adjunto → spam**: un PDF de 5MB con imágenes de la formación. | El email acaba en spam. El cliente nunca ve el precio. | El email contiene un link de descarga al PDF (almacenado en S3 con tiempo de expiración). El PDF se adjunta solo si pesa <500KB. |
+| 14 | **Pago no definido**: ¿cómo paga el cliente la inscripción? No se menciona en el flujo. | Inscripciones fantasma sin compromiso de pago. | Definir: ¿transferencia bancaria, pago online con Stripe, o solo reserva de plaza (sin pago)? Si es sin pago, el check-in es el compromiso. |
+
+### 🔴 Problemas transversales
+
+| # | Problema | Riesgo | Solución propuesta |
+|---|----------|--------|-------------------|
+| 15 | **WordPress → API sin autenticación**: los formularios de WP envían datos a la API. ¿Cómo evitas que un bot spamee el endpoint? | Miles de leads falsos. | Rate limiting por IP + API key interna (solo WP conoce la key) + honeypot field invisible en el formulario. |
+| 16 | **Mobile-first no garantizado**: los componentes de Foundation (Kanban, DataTable) funcionan en desktop. ¿Y en móvil en una finca? | El trabajador no puede usar la app donde la necesita. | Testear Kanban drag-drop en móvil (touch events). Considerar vista de lista simplificada como alternativa móvil al Kanban. El DataTable de TanStack se adapta mejor. |
+| 17 | **Sin offline mode**: el trabajador está en una finca sin cobertura. No puede rellenar el checklist. | Se vuelve al papel. La app no se usa. | Fase 2+: PWA con service worker. Las fichas se guardan en IndexedDB local y se sincronizan al recuperar conexión. No para el MVP pero sí planificado. |
+| 18 | **Almacenamiento de imágenes/video**: Foundation tiene storage con S3. Pero sin compresión previa, un trabajador sube una foto de 12MP y un video de 500MB desde el móvil. | Costes de S3. Timeouts en subida. | Compresión en frontend antes de subir (librería browser-image-compression). Video comprimido o límite de duración (máx 60s). |
+| 19 | **Dependencia externa de CanvasAPI**: la generación de titulaciones depende de un proyecto en desarrollo. Si no está listo a tiempo, la Fase 3 se bloquea. | Cuello de botella externo. | Alternativa fallback: PDFMake directo para titulaciones simples mientras CanvasAPI madura. No depender de un solo punto. |
+| 20 | **Foundation tiene solo 2 roles (admin, customer)**: ampliar a 4 roles (admin, trabajador, autónomo, colaborador) requiere refactorizar el enum de roles y los guards de NestJS. | Más trabajo del estimado en Fase 1. | Refactorizar `RoleEnum` de Foundation para soportar roles dinámicos (tabla `roles` con permisos granulares en vez de enum fijo). Aprovechar el `RolesGuard` existente. |
+| 21 | **Fase 4 (IA + CRM) en 2-3 semanas es optimista**: IA de clasificación + embeddings + fuzzy matching + CRM completo. | Fase 4 se desborda y retrasa todo. | Separar en Fase 4a (CRM básico: leads, historial) y Fase 4b (IA: clasificación + bolsa). Estimar 3-4 semanas total. |
+| 22 | **Sin fase de UAT con Carolina**: ella es la usuaria crítica. Si la app no le funciona mejor que Trello + email, la rechaza. | Adopción cero. | Añadir "Fase 0: UAT interna" después de cada fase. Carolina prueba en un entorno staging antes del deploy a producción. |
+
+---
+
+## Inventario Foundation — ¿Qué tenemos ya?
+
+> [!tip] Reutilización directa
+> Foundation cubre ~60% de las necesidades del MVP. Esto ahorra semanas de desarrollo.
+
+### ✅ Componentes reutilizables (sin modificar)
+
+| Componente | Para qué sirve en Nemus Digital |
+|------------|--------------------------------|
+| **Kanban** (completo) | Vista de fichas por estado. Drag-drop, checklists, tags, assignees. Listo. |
+| **DataTable** (TanStack v8) | Vista de tabla con sorting, filtrado, paginación server-side. |
+| **11 form components** | Todos los formularios: crear ficha, presupuesto, cliente, curso. |
+| **Auth** (JWT + refresh) | Login para todos los roles. Refresh token automático. |
+| **File storage** (local/S3) | Subida de imágenes y videos de trabajos. Adjuntos polimórficos (se vinculan a cualquier entidad). |
+| **Email** (Nodemailer + BullMQ + Maizzle) | Notificaciones, PDFs, envío de presupuestos y titulaciones. |
+| **RichEditor** (TipTap) | Notas enriquecidas en fichas, descripciones de cursos. |
+| **Calendar** (4 vistas) | Calendario de cursos y trabajos programados. |
+| **i18n** (DB + JSON) | Español + Catalán (obligatorio para Nemus). |
+| **Error tracker** | Monitorización de errores en producción. |
+| **Docker** (postgres, redis, mailpit) | Desarrollo local y despliegue. |
+| **Extension system** | Los nuevos módulos (fichas, formaciones, CRM) se añaden como extensiones sin tocar el core. |
+
+### 🟡 Necesita adaptación
+
+| Componente | Cambio necesario |
+|------------|-----------------|
+| **Roles** | Pasar de enum fijo (admin, customer) a sistema granular con permisos. Añadir `trabajador`, `autonomo`, `colaborador`. |
+| **CMS** (páginas, blog) | Patrón reutilizable para CRUD de formaciones (cursos). Misma estructura: entidad + traducciones + SEO. |
+| **Dashboard** | Componentes base existen (Overview, Cards). Necesita widgets específicos: trabajos/mes, cursos activos, leads nuevos. |
+
+### 🔴 Necesita construcción desde cero
+
+| Qué | Esfuerzo | Fase |
+|-----|----------|------|
+| **Entidad Ficha** (fichas de trabajo) + workflow de estados | Medio | F1 |
+| **Plantillas de checklist** (herencia + snapshot en creación) | Bajo | F1 |
+| **Audit log** (historial de cambios en fichas) | Bajo | F1 |
+| **Presupuestos** (entidad + PDF con PDFMake) | Medio | F2 |
+| **Notificaciones in-app** (polling/WebSocket) | Medio | F2 |
+| **Formaciones** (CRUD cursos, inscripciones, check-in) | Medio | F3 |
+| **PDFs dinámicos** (HTML → PDF via PDFMake) | Bajo | F3 |
+| **CRM** (leads, interacciones, historial) | Medio | F4a |
+| **IA clasificación** (keyword + embeddings + LLM fallback) | Alto | F4b |
+| **Bolsa de interesados** (fuzzy matching semántico) | Medio | F4b |
+| **Titulaciones CanvasAPI** (integración + fallback PDFMake) | Medio | F3 |
+| **Portal cliente** (vista limitada de sus trabajos) | Medio | F5 |
+| **PWA / offline** | Alto | Post-F5 |
+| **Exportación reportes** (CSV/Excel) | Bajo | F5 |
 
 ---
 
