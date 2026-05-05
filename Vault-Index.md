@@ -41,6 +41,8 @@ scope: vault
 │   ├── 📄 Perfil Publico - Adrian Colom Palacios.md
 │   ├── 📄 Presencia Digital - Redes y plataformas.md
 │   ├── 📄 Proyectos Publicos - URLs y estado.md
+├── 📁 08 - Clientes/
+│   ├── 📄 Nemus Arboricultura.md
 ├── 📁 99 - Archivo/
 │   ├── 📄 BREAFING_MARCA_0002 (1).md
 ├── 📁 Conceptos/
@@ -113,6 +115,10 @@ scope: vault
 - [[07 - Informacion Publica/Perfil Publico - Adrian Colom Palacios|Perfil Publico - Adrian Colom Palacios]] — Informacion publica sobre Adrian Colom Palacios recopilada de su web personal, redes sociales y presencia digital.
 - [[07 - Informacion Publica/Presencia Digital - Redes y plataformas|Presencia Digital - Redes y plataformas]] — Todas las plataformas y redes sociales donde Adrian Colom Palacios tiene presencia publica activa.
 - [[07 - Informacion Publica/Proyectos Publicos - URLs y estado|Proyectos Publicos - URLs y estado]] — Lista completa de proyectos con URLs publicas, estado actual y stack tecnologico.
+
+## 08 - Clientes (1)
+
+- [[08 - Clientes/Nemus Arboricultura|Nemus Arboricultura - Empresa de arboricultura en Mallorca]] — Investigación sobre Nemus Arboricultura y Formación S.L., empresa de arboricultura y formación profesional con sede e...
 
 ## 99 - Archivo (1)
 

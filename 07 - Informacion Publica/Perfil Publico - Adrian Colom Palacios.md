@@ -15,13 +15,13 @@ source: "adriancolompalacios.com, GitHub, LinkedIn, YouTube"
 
 > [!info] Resumen
 > Adrian Colom Palacios es Arquitecto de Soluciones IA y Desarrollador Web Full-Stack.
-> Opera desde Mallorca, Espana, combinando desarrollo de aplicaciones web con automatizacion
+> Opera desde Inca, Mallorca, Espana, combinando desarrollo de aplicaciones web con automatizacion
 > de procesos de negocio mediante inteligencia artificial.
 
 ## Identidad profesional
 
 - **Titulo principal**: "Arquitecto de Soluciones IA & Desarrollador Web"
-- **Ubicacion**: Remoto desde Mallorca, Espana
+- **Ubicacion**: Inca, Mallorca, Espana
 - **Email**: adriancolomp@gmail.com
 - **Telefono**: +34 637660752
 
