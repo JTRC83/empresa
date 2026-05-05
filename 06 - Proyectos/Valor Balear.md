@@ -42,8 +42,8 @@ Los productos baleares están **desconectados** de las redes sociales y del alca
 | **Gastronomía** | Ensaimadas, sobrasada, quesos, vinos, hierbas, aceite, dulces tradicionales |
 | **Artesanía** | Cerámica, joyería tradicional, textiles, cuero, madera, vidrio |
 
-> [!note] Scope deliberado
-> Se descartó agroturismo y servicios para mantener el foco en **productos físicos locales auténticos**.
+> [!note] Scope del MVP
+> La Fase 1 se enfoca en **productos físicos locales auténticos** (gastronomía y artesanía). Servicios, cursos y eventos se incorporan en fases posteriores como expansión natural del marketplace (ver [[#Fase 6 — Servicios, Cursos y Eventos autóctonos|Fase 6]]).
 
 ## Monetización
 
@@ -418,6 +418,49 @@ Si el webhook falla (HTTP != 2xx):
 - [ ] Programa de fidelización
 - [ ] Envíos internacionales
 
+### Fase 6 — Servicios, Cursos y Eventos autóctonos (futuro)
+- [ ] **Servicios autóctonos**: contratación de servicios locales (arboricultura, artesanía a medida, talleres presenciales)
+- [ ] **Cursos y formaciones**: marketplace de cursos impartidos por expertos baleares (gastronomía, artesanía, oficios tradicionales, naturaleza)
+- [ ] **Eventos**: experiencias presenciales y actividades culturales (catas, rutas guiadas, jornadas de concienciación medioambiental)
+- [ ] Sistema de reservas con calendario y aforo
+- [ ] Perfil de "proveedor de servicios" y "formador" (nuevos roles además de artesano)
+- [ ] Valoraciones y certificaciones para servicios y formaciones
+
+## Visión: Servicios, Cursos y Eventos autóctonos
+
+> [!info] Expansión natural del marketplace
+> Una vez consolidado el marketplace de productos físicos, Valor Balear se expande a **servicios, cursos y eventos** como evolución lógica de su misión: conectar el talento y la cultura balear con clientes de toda España.
+
+### ¿Por qué?
+
+Los productos físicos son la puerta de entrada, pero el valor cultural de Baleares no se limita a objetos. Hay un ecosistema de servicios y conocimiento local que también está **desconectado digitalmente**:
+
+- **Servicios autóctonos**: arboricultura profesional, artesanía aplicada (reformas, restauración), consultoría agrícola tradicional
+- **Cursos y formaciones**: cocina mallorquina, cerámica tradicional, trepa de árboles, gestión forestal mediterránea
+- **Eventos**: catas de vino y aceite, rutas botánicas guiadas, jornadas de concienciación medioambiental, talleres de oficios tradicionales
+
+### Caso concreto: Nemus Arboricultura
+
+[[08 - Clientes/Nemus Arboricultura|Nemus Arboricultura y Formación]] es el ejemplo perfecto de lo que Valor Balear podría albergar en su fase 6:
+
+| Dimensión | Nemus en Valor Balear |
+|-----------|----------------------|
+| **Servicio** | Contratación de servicios de arboricultura (poda, gestión forestal, evaluación de riesgos) |
+| **Curso** | Formaciones profesionales: Técnico, Trepador, Palmerista, Forestal |
+| **Evento** | Experiencias de concienciación medioambiental: "El conocimiento nos acerca al bosque" |
+
+Nemus ya opera en Inca (misma ciudad que [[07 - Informacion Publica/Perfil Publico - Adrian Colom Palacios|Adrián Colom]]) y es miembro de la Asociación Española de Arboricultura. Su modelo de negocio — servicios + formación + experiencias — encaja perfectamente en la visión expandida de Valor Balear.
+
+### Nuevos roles en la plataforma
+
+La Fase 6 introduce dos nuevos tipos de vendor además del artesano:
+
+1. **Proveedor de servicios** — ofrece servicios contratables (arboricultura, reformas, consultoría)
+2. **Formador** — imparte cursos y talleres (presenciales u online)
+3. **Organizador de eventos** — crea experiencias y actividades culturales
+
+Cada uno con su propio dashboard, sistema de reservas, y gestión de disponibilidad.
+
 ## Relaciones
 
 - Parte del ecosistema SOM-U
@@ -425,3 +468,4 @@ Si el webhook falla (HTTP != 2xx):
 - Complementa [[Atenfy]] para atención al cliente automatizada
 - Podría usar [[CanvasAPI]] para generar contenido visual de marketing
 - [[GenLegalTxts]] puede proveer textos legales (términos y condiciones, privacidad)
+- [[08 - Clientes/Nemus Arboricultura|Nemus Arboricultura]] — caso concreto de proveedor de servicios, cursos y eventos autóctonos para la Fase 6
