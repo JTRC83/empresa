@@ -550,7 +550,8 @@ gantt
 - [ ] **Cursos y formaciones**: marketplace de cursos impartidos por expertos baleares (gastronomía, artesanía, oficios tradicionales, naturaleza)
 - [ ] **Eventos**: experiencias presenciales y actividades culturales (catas, rutas guiadas, jornadas de concienciación medioambiental)
 - [ ] Sistema de reservas con calendario y aforo
-- [ ] Perfil de "proveedor de servicios" y "formador" (nuevos roles además de artesano)
+- [ ] Sistema de secciones habilitables: una tienda activa las secciones que necesita (Productos, Servicios, Cursos, Eventos) sin crear múltiples cuentas
+- [ ] Dashboard unificado que se adapta dinámicamente a las secciones activas
 - [ ] Valoraciones y certificaciones para servicios y formaciones
 
 ## Visión: Servicios, Cursos y Eventos autóctonos
@@ -564,21 +565,25 @@ gantt
 flowchart TD
     VB[<b>VALOR BALEAR</b><br/>Marketplace de cultura balear]
     
-    VB --> P[🏷️ <b>Productos</b><br/>Gastronomía + Artesanía]
-    VB --> S[🔧 <b>Servicios</b><br/>Arboricultura, reformas, consultoría]
-    VB --> C[📚 <b>Cursos</b><br/>Formaciones y talleres]
-    VB --> E[🎪 <b>Eventos</b><br/>Catas, rutas, experiencias]
+    TIENDA[<b>Tienda verificada</b><br/>Alta única + KYC Stripe]
+    
+    VB --> TIENDA
+    
+    TIENDA --> P[🏷️ <b>Productos</b><br/>Gastronomía + Artesanía]
+    TIENDA --> S[🔧 <b>Servicios</b><br/>Arboricultura, reformas, consultoría]
+    TIENDA --> C[📚 <b>Cursos</b><br/>Formaciones y talleres]
+    TIENDA --> E[🎪 <b>Eventos</b><br/>Catas, rutas, experiencias]
 
-    P --> P1[Artesano<br/>rol: VENDOR]
-    S --> S1[Proveedor<br/>rol: PROVIDER]
-    C --> C1[Formador<br/>rol: INSTRUCTOR]
-    E --> E1[Organizador<br/>rol: ORGANIZER]
+    P -.- TOGGLE1[✅ Sección activada]
+    S -.- TOGGLE2[✅ Sección activada]
+    C -.- TOGGLE3[❌ Sección desactivada]
+    E -.- TOGGLE4[❌ Sección desactivada]
 
-    P1 --> DASH1[Dashboard<br/>Productos + Pedidos + Envíos]
-    S1 --> DASH2[Dashboard<br/>Servicios + Reservas + Calendario]
-    C1 --> DASH3[Dashboard<br/>Cursos + Inscripciones + Aforo]
-    E1 --> DASH4[Dashboard<br/>Eventos + Tickets + Check-in]
+    TIENDA --> DASH[Dashboard unificado<br/>Solo muestra secciones activas]
 ```
+
+> [!tip] Modelo de secciones habilitables
+> Una tienda se da de alta **una sola vez** con verificación KYC. A partir de ahí, **activa las secciones que necesita** desde su panel de ajustes. No hay roles fijos — hay secciones que se habilitan bajo demanda. Un mismo negocio puede vender productos, ofrecer servicios e impartir cursos simultáneamente.
 
 ### ¿Por qué?
 
@@ -600,15 +605,131 @@ Los productos físicos son la puerta de entrada, pero el valor cultural de Balea
 
 Nemus ya opera en Inca (misma ciudad que [[07 - Informacion Publica/Perfil Publico - Adrian Colom Palacios|Adrián Colom]]) y es miembro de la Asociación Española de Arboricultura. Su modelo de negocio — servicios + formación + experiencias — encaja perfectamente en la visión expandida de Valor Balear.
 
-### Nuevos roles en la plataforma
+### Secciones habilitables (no roles)
 
-La Fase 6 introduce dos nuevos tipos de vendor además del artesano:
+La Fase 6 no introduce nuevos tipos de usuario, sino **secciones que cada tienda puede activar o desactivar** desde su panel de ajustes:
 
-1. **Proveedor de servicios** — ofrece servicios contratables (arboricultura, reformas, consultoría)
-2. **Formador** — imparte cursos y talleres (presenciales u online)
-3. **Organizador de eventos** — crea experiencias y actividades culturales
+| Sección | ¿Qué permite? | Ejemplo |
+|---------|--------------|---------|
+| **Productos** | Vender productos físicos con envío | Un ceramista vende sus piezas |
+| **Servicios** | Ofrecer servicios contratables con reserva | Un arborista ofrece poda profesional |
+| **Cursos** | Publicar formaciones con inscripciones y aforo | Un cocinero imparte talleres de cocina mallorquina |
+| **Eventos** | Crear experiencias con venta de tickets | Una bodega organiza catas mensuales |
 
-Cada uno con su propio dashboard, sistema de reservas, y gestión de disponibilidad.
+**Ventajas del modelo:**
+
+- Una tienda puede tener **múltiples secciones activas** simultáneamente
+- El alta y la verificación KYC se hacen **una sola vez**
+- El dashboard se adapta dinámicamente: solo muestra lo que la tienda tiene activado
+- Ejemplo real: [[08 - Clientes/Nemus Arboricultura|Nemus]] activaría Servicios + Cursos + Eventos
+- Sin fricción: si un artesano quiere añadir cursos, activa la sección sin crear otra cuenta
+
+## Propuestas de Expansión
+
+> [!tip] Más allá de Baleares
+> Ideas para evolucionar la plataforma una vez consolidado el MVP y las 6 fases. Ordenadas por impacto potencial.
+
+### 1. Expansión geográfica — "Valor" como franquicia regional
+
+El modelo Valor Balear es replicable en cualquier región con identidad cultural fuerte y productos autóctonos desconectados digitalmente.
+
+| Región | Nombre potencial | Productos insignia |
+|--------|-----------------|-------------------|
+| **Canarias** | Valor Canario | Mojo, gofio, ron miel, platanero |
+| **País Vasco** | Valor Vasco | Txakoli, Idiazabal, sidra natural |
+| **Andalucía** | Valor Andaluz | Aceite de oliva, jamón, cerámica triana |
+| **Galicia** | Valor Gallego | Albariño, percebes, cerámica Sargadelos |
+| **Cataluña** | Valor Català | Cava, fuet, porrón artesano |
+
+**Estrategia**: Una vez el modelo técnico y operativo esté probado en Baleares, cada región se lanza como **instancia independiente** (mismo backend, mismo Foundation, distinto tenant/isla de datos). Misma marca paraguas "Valor", adaptada a cada territorio.
+
+### 2. IA integrada — asistentes inteligentes
+
+Conectando con [[Atenfy]] y el stack IA del ecosistema SOM-U:
+
+| Feature | Descripción | Tecnología |
+|---------|-------------|------------|
+| **Chatbot de recomendaciones** | "¿Qué vino marida con esta sobrasada?" → recomienda productos complementarios | Atenfy + RAG sobre el catálogo |
+| **Asistente para artesanos** | Sugiere mejoras en fichas de producto, detecta fotos de baja calidad, recomienda precios según mercado | IA + análisis de catálogo |
+| **Generación de descripciones** | El artesano sube una foto y la IA genera una descripción optimizada para SEO en 3 idiomas | OpenAI + CanvasAPI |
+| **Predicción de stock** | Alerta al artesano cuando un producto va a agotarse según tendencias de venta | ML sobre histórico |
+| **Atención al cliente 24/7** | Chatbot que resuelve dudas de envíos, devoluciones y estado del pedido | Atenfy multiidioma |
+| **Personalización de homepage** | Cada cliente ve productos según su historial de compras y navegación | Motor de recomendación |
+
+### 3. Suscripción "Caja Balear" — recurrencia mensual
+
+Modelo de suscripción complementario al marketplace:
+
+```
+Cliente se suscribe (19€/mes)
+  ↓
+Cada mes recibe una caja con 3-5 productos sorpresa
+  ↓
+Productos de diferentes artesanos (rotación mensual)
+  ↓
+Incluye tarjeta con historia del artesano + QR a su tienda en Valor Balear
+  ↓
+Cliente descubre productos → vuelve al marketplace a comprar más
+```
+
+**Ventajas**: Ingresos recurrentes, exposición rotatoria para artesanos pequeños, puerta de entrada al marketplace para nuevos clientes.
+
+### 4. Live Shopping — el artesano en directo
+
+Streaming en vivo donde los artesanos muestran su proceso:
+
+- Un ceramista torneando en directo → los espectadores compran la pieza que acaban de ver nacer
+- Una cocinera preparando ensaimadas → pedidos en tiempo real
+- Plataforma integrada en Valor Balear (no dependiente de Instagram/TikTok)
+- Chat en directo, preguntas al artesano, ofertas flash durante el streaming
+
+### 5. Modo "Regalo" — experiencia de compra emocional
+
+- Envoltorio especial con identidad balear (papel de estraza, cuerda de esparto, ramita de olivo)
+- Tarjeta personalizada escrita a mano por el artesano
+- Envío directo al destinatario con tracking
+- Opción "sorpresa": el destinatario no sabe qué producto es hasta que abre la caja
+- Fecha de entrega programada (cumpleaños, Navidad, Sant Jordi)
+
+### 6. Conexión con turismo — el puente físico-digital
+
+- **Hoteles y agroturismos**: los huéspedes reciben un QR en la habitación que lleva a una selección curada de productos locales que pueden comprar y recibir en casa
+- **"Llévate Baleares"**: colaboración con aeropuertos para puntos de recogida de pedidos hechos durante la estancia
+- **Mapa interactivo**: geolocalización de artesanos con talleres visitables
+- **Experiencias "Origen"**: visita al taller del artesano + compra del producto (turismo experiencial)
+
+### 7. API pública — Valor Balear como plataforma
+
+Exponer endpoints públicos para que terceros integren el catálogo:
+
+- Otras tiendas online pueden embeber productos de Valor Balear (afiliación)
+- Blogs de gastronomía pueden mostrar productos con enlace de compra
+- Hoteles pueden integrar una tienda mini en su web
+- Modelo de afiliación: el referidor recibe un % de la venta
+
+### 8. Trazabilidad y certificación de origen
+
+- Cada producto incluye **"Pasaporte de origen"** verificable:
+  - Quién lo hizo (artesano, año de fundación del taller)
+  - Dónde (isla, municipio, coordenadas)
+  - Con qué (materiales, ingredientes, proveedores)
+- Certificación digital de autenticidad para combatir falsificaciones
+- Storytelling automático: cada producto cuenta su historia
+
+### 9. Integración con CanvasAPI — marketing visual automatizado
+
+- Generación automática de banners y creatividades para campañas
+- Variaciones visuales por isla (Mallorca, Menorca, Ibiza, Formentera)
+- Plantillas de email marketing con identidad Valor Balear
+- Catálogos digitales interactivos generados desde el inventario
+
+### 10. Programa de Embajadores — los clientes como prescriptores
+
+- Clientes recurrentes se convierten en "Embajadores de la Cultura Balear"
+- Código de descuento personalizado para compartir
+- Comisión por ventas referidas (similar a afiliación pero con comunidad)
+- Acceso anticipado a productos nuevos y cajas exclusivas
+- Eventos privados para embajadores (catas virtuales, encuentros con artesanos)
 
 ## Relaciones
 
