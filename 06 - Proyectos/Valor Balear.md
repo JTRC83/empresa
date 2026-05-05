@@ -544,6 +544,7 @@ gantt
 - [ ] Sistema de reseñas
 - [ ] Programa de fidelización
 - [ ] Envíos internacionales
+- [ ] Sistema de afiliación con QR y tracker 72h (ver [[#7. API pública y Afiliación con QR — el puente físico-digital|Propuesta 7]])
 
 ### Fase 6 — Servicios, Cursos y Eventos autóctonos (futuro)
 - [ ] **Servicios autóctonos**: contratación de servicios locales (arboricultura, artesanía a medida, talleres presenciales)
@@ -698,14 +699,90 @@ Streaming en vivo donde los artesanos muestran su proceso:
 - **Mapa interactivo**: geolocalización de artesanos con talleres visitables
 - **Experiencias "Origen"**: visita al taller del artesano + compra del producto (turismo experiencial)
 
-### 7. API pública — Valor Balear como plataforma
+### 7. API pública y Afiliación con QR — el puente físico-digital
 
-Exponer endpoints públicos para que terceros integren el catálogo:
+Sistema de afiliación que permite a cualquier negocio, creador de contenido o particular ganar comisiones refiriendo tráfico a Valor Balear. La clave: **QR físico con tracker de 72h**.
 
-- Otras tiendas online pueden embeber productos de Valor Balear (afiliación)
-- Blogs de gastronomía pueden mostrar productos con enlace de compra
-- Hoteles pueden integrar una tienda mini en su web
-- Modelo de afiliación: el referidor recibe un % de la venta
+#### Flujo completo
+
+```mermaid
+sequenceDiagram
+    actor AF as Afiliado<br/>(tienda física, hotel, blog)
+    actor CL as Cliente
+    participant VB as Valor Balear
+    participant DB as DB (tracker)
+
+    AF->>VB: Genera QR único desde su dashboard
+    VB->>AF: QR con ?ref=afiliado_42
+    
+    AF->>CL: Muestra QR en folleto/cartel/web
+
+    CL->>VB: Escanea QR → GET /r?ref=afiliado_42
+    VB->>DB: Guarda cookie/tracker (72h)
+    VB->>CL: Redirige a la home con ref embedido
+
+    Note over CL,DB: El cliente navega libremente...
+
+    CL->>VB: Añade 2 productos al carrito
+    VB->>DB: ¿Tracker activo para este cliente?
+    DB->>VB: ✅ Sí — afiliado_42
+
+    CL->>VB: Checkout y paga 60€
+    VB->>VB: Atribución: afiliado_42
+    VB->>AF: Comisión (ej: 5% = 3€)
+```
+
+#### Cómo funciona el trackeo
+
+| Componente | Detalle |
+|------------|---------|
+| **Generación de QR** | El afiliado crea un QR desde su dashboard. Puede apuntar a la home o a un producto/colección específica. |
+| **URL del QR** | `https://valorbalear.com/r?ref=afiliado_42` — endpoint de redirección que captura la referencia. |
+| **Tracker (cookie)** | Se establece una cookie `vb_ref` con el ID del afiliado y expiración a 72h. También se guarda en backend por si el navegador borra cookies. |
+| **Ventana de atribución** | 72 horas desde el escaneo. Si el cliente compra en ese período, la venta se atribuye al afiliado. Último clic gana (last-click attribution). |
+| **Comisión** | Porcentaje configurable por Valor Balear (ej: 5% del total del pedido). Sale del margen de la plataforma, no del artesano. |
+| **Split de pago** | Stripe Connect hace el split en 3: Artesano (85%) + Valor Balear (10%) + Afiliado (5%). |
+| **Dashboard del afiliado** | Estadísticas: escaneos, clics, conversiones, comisiones acumuladas, historial de pagos. |
+
+#### Casos de uso reales
+
+| Afiliado | Soporte físico | Ejemplo |
+|----------|---------------|---------|
+| **Tienda de souvenirs** | Folleto con QR en la bolsa de compra | "¿Te gustó la ensaimada? Cómprala online → QR" |
+| **Hotel rural** | Tarjeta en la habitación con QR | "Descubre los productos de la isla → QR" |
+| **Restaurante** | QR en el menú o en la cuenta | "El aceite que has probado, directo del productor → QR" |
+| **Artesano sin e-commerce** | Cartel en el taller con QR | "¿No puedes llevártelo ahora? Pídelo online → QR" |
+| **Bloguero gastronómico** | Link en artículo | Reseña de una bodega + link de afiliado |
+| **Guía turístico** | QR en el mapita que entrega | "Llévate un pedacito de la isla → QR" |
+
+#### Stack técnico
+
+```mermaid
+flowchart LR
+    subgraph Afiliado["📱 Afiliado"]
+        DASH[Dashboard afiliado]
+        QR[QR Generator]
+    end
+
+    subgraph VB["Valor Balear"]
+        REDIR[GET /r?ref=ID<br/>Redirección + tracker]
+        MID[Middleware de atribución<br/>Lee cookie vb_ref]
+        CHECKOUT[Checkout<br/>Aplica atribución]
+    end
+
+    subgraph Stripe["💳 Stripe Connect"]
+        SPLIT[Split: Artesano + VB + Afiliado]
+    end
+
+    DASH --> QR
+    QR --> REDIR
+    REDIR --> MID
+    MID --> CHECKOUT
+    CHECKOUT --> SPLIT
+```
+
+> [!tip] Ventaja competitiva
+> A diferencia del affiliate marketing tradicional (solo digital), Valor Balear cierra el círculo **físico → digital → físico**: un QR en un folleto impreso lleva a una compra online que se entrega en casa. Esto no lo hace Amazon ni Etsy con identidad local.
 
 ### 8. Trazabilidad y certificación de origen
 
