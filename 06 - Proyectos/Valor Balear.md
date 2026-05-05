@@ -64,6 +64,41 @@ Los productos baleares están **desconectados** de las redes sociales y del alca
 > [!tip] Construido sobre [[Foundation]]
 > Se parte del monorepo Foundation y se añaden las features específicas del marketplace.
 
+### Diagrama de arquitectura
+
+```mermaid
+flowchart TB
+    subgraph Frontend["🎨 Frontend — Nuxt 4"]
+        MP[Marketplace público<br/>SSR + i18n]
+        DV[Dashboard vendedor<br/>CRUD + etiquetas + webhooks]
+        AD[Admin panel<br/>Gestión + reportes]
+    end
+
+    subgraph Backend["⚙️ Backend — NestJS 11"]
+        API[API REST]
+        ORM[TypeORM 0.3]
+        JOBS[BullMQ + Redis<br/>Colas y workers]
+    end
+
+    subgraph Externo["🔌 Servicios externos"]
+        SC[Stripe Connect<br/>Split de pagos]
+        SD[Sendcloud API<br/>Etiquetas + tracking]
+        S3[(S3 / Local<br/>File storage)]
+    end
+
+    subgraph Datos["💾 Datos"]
+        PG[(PostgreSQL 17<br/>Marketplace)]
+    end
+
+    Frontend --> API
+    API --> ORM
+    ORM --> PG
+    JOBS --> SD
+    JOBS --> SC
+    API --> S3
+    SC --> JOBS
+```
+
 | Capa | Tecnología | Propósito |
 |------|------------|-----------|
 | **Monorepo** | Turborepo + pnpm | Task runner, gestión de paquetes |
@@ -128,6 +163,50 @@ Worker busca URLs configuradas para Tienda A
 POST a la URL del vendedor con datos del sub-pedido
   ↓
 CRM/ERP del vendedor recibe evento y actualiza stock
+```
+
+### Diagrama de flujo completo
+
+```mermaid
+flowchart TD
+    subgraph Cliente["🛒 Cliente"]
+        A[Navega /productos] --> B[Añade productos al carrito]
+        B --> C[Checkout: 1 dirección, 1 pago]
+    end
+
+    subgraph Stripe["💳 Stripe Connect"]
+        C --> D[Procesa pago único]
+        D --> E[Split automático por tienda]
+    end
+
+    subgraph Backend["⚙️ NestJS Backend"]
+        E --> F[Crea 1 Order global]
+        F --> G[Crea N SubOrders por tienda]
+        G --> H[Dispara webhooks]
+    end
+
+    subgraph Artesano["📦 Artesano (Tienda A)"]
+        G --> I[Ve solo sus SubOrders en /dashboard]
+        I --> J[Prepara paquete]
+        J --> K[Genera etiqueta vía Sendcloud]
+        K --> L[Imprime y pega etiqueta]
+    end
+
+    subgraph Sendcloud["🚚 Sendcloud"]
+        K --> M{¿Recogida o Drop-off?}
+        M -->|Recogida| N[Programa pickup]
+        M -->|Drop-off| O[Genera etiqueta PDF]
+    end
+
+    subgraph ClienteFinal["📬 Cliente"]
+        L --> P[Recibe email con OrderID + tracking]
+    end
+
+    subgraph Webhook["🔗 Webhook (Tienda A)"]
+        H --> Q[Worker busca URLs de Tienda A]
+        Q --> R[POST firmado HMAC al CRM/ERP]
+        R --> S[Vendedor actualiza stock]
+    end
 ```
 
 ## Arquitectura Multi-Vendor
@@ -322,6 +401,27 @@ POST /api/v2/pickups
 - Valor Balear recibe su comisión automáticamente
 
 ### Flujo de pago
+
+```mermaid
+sequenceDiagram
+    actor C as Cliente
+    participant VB as Valor Balear
+    participant SC as Stripe Connect
+    participant TA as Tienda A (ensaimada)
+    participant TB as Tienda B (collar)
+
+    C->>VB: Paga 50€ (20€ + 30€)
+    VB->>SC: PaymentIntent 50€
+    SC->>SC: Split automático
+    SC->>TA: 18€ (20€ - 10%)
+    SC->>TB: 27€ (30€ - 10%)
+    SC->>VB: 5€ comisión
+    SC->>SC: ~1.5€ fees
+    VB->>C: Email confirmación + tracking
+    TA->>C: Tracking envío ensaimada
+    TB->>C: Tracking envío collar
+```
+
 ```
 Cliente paga 50€ (ensaimada 20€ + collar 30€)
   ↓
@@ -386,6 +486,33 @@ Si el webhook falla (HTTP != 2xx):
 
 ## Roadmap Sugerido
 
+```mermaid
+gantt
+    title Valor Balear — Roadmap
+    dateFormat  YYYY-MM
+    axisFormat  %b %Y
+
+    section Fase 1 — MVP
+    Monorepo + Auth        :f1a, 2026-07, 1M
+    Catálogo + Carrito     :f1b, after f1a, 1M
+    Stripe Connect + SubOrders :f1c, after f1b, 1M
+
+    section Fase 2 — Logística
+    Sendcloud integración  :f2a, after f1c, 1M
+
+    section Fase 3 — Webhooks
+    Motor de webhooks      :f3a, after f2a, 1M
+
+    section Fase 4 — Contenido
+    Blog + SEO continuo    :f4a, 2026-07, 6M
+
+    section Fase 5 — Escalar
+    PWA + Reseñas + Fidelización :f5a, 2026-12, 3M
+
+    section Fase 6 — Servicios/Cursos/Eventos
+    Marketplace expandido   :f6a, 2027-03, 4M
+```
+
 ### Fase 1 — MVP (2-3 meses)
 - [ ] Setup del monorepo desde Foundation
 - [ ] Auth + roles (admin, vendor, customer)
@@ -430,6 +557,28 @@ Si el webhook falla (HTTP != 2xx):
 
 > [!info] Expansión natural del marketplace
 > Una vez consolidado el marketplace de productos físicos, Valor Balear se expande a **servicios, cursos y eventos** como evolución lógica de su misión: conectar el talento y la cultura balear con clientes de toda España.
+
+### Arquitectura de la plataforma expandida
+
+```mermaid
+flowchart TD
+    VB[<b>VALOR BALEAR</b><br/>Marketplace de cultura balear]
+    
+    VB --> P[🏷️ <b>Productos</b><br/>Gastronomía + Artesanía]
+    VB --> S[🔧 <b>Servicios</b><br/>Arboricultura, reformas, consultoría]
+    VB --> C[📚 <b>Cursos</b><br/>Formaciones y talleres]
+    VB --> E[🎪 <b>Eventos</b><br/>Catas, rutas, experiencias]
+
+    P --> P1[Artesano<br/>rol: VENDOR]
+    S --> S1[Proveedor<br/>rol: PROVIDER]
+    C --> C1[Formador<br/>rol: INSTRUCTOR]
+    E --> E1[Organizador<br/>rol: ORGANIZER]
+
+    P1 --> DASH1[Dashboard<br/>Productos + Pedidos + Envíos]
+    S1 --> DASH2[Dashboard<br/>Servicios + Reservas + Calendario]
+    C1 --> DASH3[Dashboard<br/>Cursos + Inscripciones + Aforo]
+    E1 --> DASH4[Dashboard<br/>Eventos + Tickets + Check-in]
+```
 
 ### ¿Por qué?
 
