@@ -393,6 +393,9 @@ POST /api/v2/pickups
 
 ## Pagos con Stripe Connect
 
+> [!note] Decisión de arquitectura documentada
+> La evaluación completa de alternativas (Stripe Connect, Mollie, PaynoPain) y la decisión de usar Stripe Connect para MVP están en [[Valor Balear - Arquitectura de Pagos]].
+
 ### ¿Por qué Stripe Connect?
 - **Split automático** del pago entre plataforma y vendedor
 - El cliente paga **una sola vez** aunque el carrito tenga productos de varias tiendas
@@ -815,4 +818,5 @@ flowchart LR
 - Complementa [[Atenfy]] para atención al cliente automatizada
 - Podría usar [[CanvasAPI]] para generar contenido visual de marketing
 - [[GenLegalTxts]] puede proveer textos legales (términos y condiciones, privacidad)
+- [[Valor Balear - Arquitectura de Pagos]] — decisión documentada de la arquitectura de pagos (Stripe Connect vs Mollie vs PaynoPain)
 - [[08 - Clientes/Nemus Arboricultura|Nemus Arboricultura]] — caso concreto de proveedor de servicios, cursos y eventos autóctonos para la Fase 6

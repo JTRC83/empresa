@@ -34,6 +34,7 @@ scope: vault
 │   ├── 📄 CommitWear.md
 │   ├── 📄 Foundation.md
 │   ├── 📄 GenLegalTxts.md
+│   ├── 📄 Valor Balear - Arquitectura de Pagos.md
 │   ├── 📄 Valor Balear.md
 ├── 📁 07 - Informacion Publica/
 │   ├── 📄 Ikirai Solutions - Agencia de IA.md
@@ -101,13 +102,14 @@ scope: vault
 
 - [[05 - Arquitectura de Negocio/SOM - U  — Arquitectura de Sistemas Digitales (2)|SOM-U - Arquitectura de Sistemas Digitales]] — SOM - U   — Arquitectura de Sistemas Digitales  ADRIAN COLOM PALACIOS  43470755L  CARRER FELIP II. 37. 3L  adriancolo...
 
-## 06 - Proyectos (6)
+## 06 - Proyectos (7)
 
 - [[06 - Proyectos/Atenfy|Atenfy]] — - **Manager de bots y llamadas con IA multicanal**
 - [[06 - Proyectos/CanvasAPI|CanvasAPI]] — - **API-First Template Engine** — Motor de plantillas visuales orientado a API
 - [[06 - Proyectos/CommitWear|CommitWear]] — - Marca de ropa con estilo ASCII
 - [[06 - Proyectos/Foundation|Foundation]] — | Herramienta | Versión | Propósito |
 - [[06 - Proyectos/GenLegalTxts|GenLegalTxts]] — - Plataforma web para generar textos legales personalizados para sitios web
+- [[06 - Proyectos/Valor Balear - Arquitectura de Pagos|Valor Balear — Arquitectura de Pagos]] — Decisión de arquitectura de pagos para Valor Balear. Análisis comparativo de Stripe Connect, Mollie y PaynoPain como ...
 - [[06 - Proyectos/Valor Balear|Valor Balear]] — Los productos baleares están **desconectados** de las redes sociales y del alcance digital. Gente de fuera de las isl...
 
 ## 07 - Informacion Publica (5)

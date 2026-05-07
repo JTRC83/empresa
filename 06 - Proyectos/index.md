@@ -12,6 +12,7 @@ folder: "06 - Proyectos"
 ├── 📄 CommitWear.md
 ├── 📄 Foundation.md
 ├── 📄 GenLegalTxts.md
+├── 📄 Valor Balear - Arquitectura de Pagos.md
 ├── 📄 Valor Balear.md
 ```
 
@@ -22,5 +23,6 @@ folder: "06 - Proyectos"
 - [[CommitWear|CommitWear]] — - Marca de ropa con estilo ASCII `#proyecto #producto #marca-de-ropa #ascii #som-u #ecosistema`
 - [[Foundation|Foundation]] — | Herramienta | Versión | Propósito | `#proyecto #producto #plantilla #monorepo #nestjs #nuxt #saas #infraestructura #backend #frontend #arquitectura-limpia #hexagonal #typeorm #postgresql #som-u #ecosistema`
 - [[GenLegalTxts|GenLegalTxts]] — - Plataforma web para generar textos legales personalizados para sitios web `#proyecto #producto #legal #textos-legales #generador #normativa #privacidad #cookies #som-u #ecosistema`
+- [[Valor Balear - Arquitectura de Pagos|Valor Balear — Arquitectura de Pagos]] — Decisión de arquitectura de pagos para Valor Balear. Análisis comparativo de Stripe Connect, Mollie y PaynoPain como soluciones de split payment multi-vendor para el marketplace de productos baleares. `#proyecto #valor-balear #pagos #arquitectura #decision #stripe-connect #mollie #paynopain #marketplace #multi-vendor`
 - [[Valor Balear|Valor Balear]] — Los productos baleares están **desconectados** de las redes sociales y del alcance digital. Gente de fuera de las islas no llega a estos productos.... `#proyecto #producto #marketplace #baleares #productos-locales #gastronomía #artesanía #multi-vendor #sendcloud #stripe-connect #webhooks #e-commerce #som-u #ecosistema`
 
