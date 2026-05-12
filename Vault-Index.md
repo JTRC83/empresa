@@ -34,6 +34,7 @@ scope: vault
 │   ├── 📄 CommitWear.md
 │   ├── 📄 Foundation.md
 │   ├── 📄 GenLegalTxts.md
+│   ├── 📄 SOM-U CRM - Motor de Inteligencia Comercial.md
 │   ├── 📄 Valor Balear - Arquitectura de Pagos.md
 │   ├── 📄 Valor Balear.md
 ├── 📁 07 - Informacion Publica/
@@ -46,6 +47,8 @@ scope: vault
 │   ├── 📄 Nemus Arboricultura.md
 ├── 📁 09 - Propuestas/
 │   ├── 📄 Nemus Digital.md
+│   ├── 📄 Plan de Empresa - Ecosistema SOM-U.md
+│   ├── 📄 Plan de Empresa - Valor Balear.md
 ├── 📁 99 - Archivo/
 │   ├── 📄 BREAFING_MARCA_0002 (1).md
 ├── 📁 Conceptos/
@@ -70,6 +73,8 @@ scope: vault
 │   ├── 📄 Tagline - Tecnología que une personas.md
 │   ├── 📄 Territorio Visual - Burbuja Nodo Sistema Vivo.md
 ├── 📄 README.md
+├── 📁 archivos/
+│   └── 📎 infoplaempresa.pdf
 ├── 📎 docker-compose.yml
 ├── 📎 start.mjs
 └── 📎 start.ps1
@@ -102,13 +107,14 @@ scope: vault
 
 - [[05 - Arquitectura de Negocio/SOM - U  — Arquitectura de Sistemas Digitales (2)|SOM-U - Arquitectura de Sistemas Digitales]] — SOM - U   — Arquitectura de Sistemas Digitales  ADRIAN COLOM PALACIOS  43470755L  CARRER FELIP II. 37. 3L  adriancolo...
 
-## 06 - Proyectos (7)
+## 06 - Proyectos (8)
 
 - [[06 - Proyectos/Atenfy|Atenfy]] — - **Manager de bots y llamadas con IA multicanal**
 - [[06 - Proyectos/CanvasAPI|CanvasAPI]] — - **API-First Template Engine** — Motor de plantillas visuales orientado a API
 - [[06 - Proyectos/CommitWear|CommitWear]] — - Marca de ropa con estilo ASCII
 - [[06 - Proyectos/Foundation|Foundation]] — | Herramienta | Versión | Propósito |
 - [[06 - Proyectos/GenLegalTxts|GenLegalTxts]] — - Plataforma web para generar textos legales personalizados para sitios web
+- [[06 - Proyectos/SOM-U CRM - Motor de Inteligencia Comercial|SOM-U CRM - Motor de Inteligencia Comercial]] — Sistema CRM + motor de outreach canal-agnóstico construido sobre Foundation. Centraliza inteligencia de contactos, en...
 - [[06 - Proyectos/Valor Balear - Arquitectura de Pagos|Valor Balear — Arquitectura de Pagos]] — Decisión de arquitectura de pagos para Valor Balear. Análisis comparativo de Stripe Connect, Mollie y PaynoPain como ...
 - [[06 - Proyectos/Valor Balear|Valor Balear]] — Los productos baleares están **desconectados** de las redes sociales y del alcance digital. Gente de fuera de las isl...
 
@@ -124,9 +130,11 @@ scope: vault
 
 - [[08 - Clientes/Nemus Arboricultura|Nemus Arboricultura - Empresa de arboricultura en Mallorca]] — Investigación sobre Nemus Arboricultura y Formación S.L., empresa de arboricultura y formación profesional con sede e...
 
-## 09 - Propuestas (1)
+## 09 - Propuestas (3)
 
 - [[09 - Propuestas/Nemus Digital|Propuesta Nemus Digital — Sistema de gestión de arboricultura y formaciones]] — Propuesta de sistema digital para Nemus Arboricultura: digitalización del flujo de trabajo de campo (fichas, presupue...
+- [[09 - Propuestas/Plan de Empresa - Ecosistema SOM-U|Plan de Empresa - Ecosistema SOM-U]] — Plan de empresa integral del ecosistema SOM-U by Adrian Colom. Cubre los 7 proyectos, su modelo de negocio, proyeccio...
+- [[09 - Propuestas/Plan de Empresa - Valor Balear|Plan de Empresa - Valor Balear]] — Plan de empresa de Valor Balear siguiendo la plantilla oficial de ADR Balears. Marketplace de productos locales autén...
 
 ## 99 - Archivo (1)
 
