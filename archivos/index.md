@@ -6,7 +6,3 @@ folder: "archivos"
 
 # archivos
 
-```
-└── 📎 infoplaempresa.pdf
-```
-

@@ -13,8 +13,6 @@
 
   // Default agent
   "default_agent": "knowledge-manager",
-  // Model for lightweight tasks (title generation, summaries)
-  "small_model": "opencode-go/deepseek-v4-flash",
 
   // ─── MCP Servers ────────────────────────────────────────────────────────────
   // Remote MCPs (always available, no local setup)

@@ -74,7 +74,6 @@ scope: vault
 │   ├── 📄 Territorio Visual - Burbuja Nodo Sistema Vivo.md
 ├── 📄 README.md
 ├── 📁 archivos/
-│   └── 📎 infoplaempresa.pdf
 ├── 📎 docker-compose.yml
 ├── 📎 start.mjs
 └── 📎 start.ps1
