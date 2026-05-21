@@ -48,6 +48,7 @@ scope: vault
 │   ├── 📄 Nemus Arboricultura.md
 │   ├── 📄 Sando Capital - Javier Sandoval Haro.md
 ├── 📁 09 - Propuestas/
+│   ├── 📄 Brief de Diseño - SOM-OS.md
 │   ├── 📄 Nemus Digital.md
 │   ├── 📄 Plan de Empresa - Ecosistema SOM-OS.md
 │   ├── 📄 Plan de Empresa - Valor Balear.md
@@ -134,8 +135,9 @@ scope: vault
 - [[08 - Clientes/Nemus Arboricultura|Nemus Arboricultura]] — title: "Nemus Arboricultura - Empresa de arboricultura en Mallorca"
 - [[08 - Clientes/Sando Capital - Javier Sandoval Haro|Sando Capital - Intermediario de inversiones B2C]] — Ficha de cliente de Javier Sandoval Haro, fundador de Sando Capital. Opera como puente entre el sector de inversiones...
 
-## 09 - Propuestas (3)
+## 09 - Propuestas (4)
 
+- [[09 - Propuestas/Brief de Diseño - SOM-OS|Brief de Diseño — SOM-OS]] — Brief de identidad visual del ecosistema SOM-OS para el diseñador. Incluye concepto de marca, personalidad, territori...
 - [[09 - Propuestas/Nemus Digital|Propuesta Nemus Digital — Sistema de gestión de arboricultura y formaciones]] — Propuesta de sistema digital para Nemus Arboricultura: digitalización del flujo de trabajo de campo (fichas, presupue...
 - [[09 - Propuestas/Plan de Empresa - Ecosistema SOM-OS|Plan de Empresa - Ecosistema SOM-OS]] — title: "Plan de Empresa - ecosistema SOM-OS"
 - [[09 - Propuestas/Plan de Empresa - Valor Balear|Plan de Empresa - Valor Balear]] — title: "Plan de Empresa - Valor Balear"
