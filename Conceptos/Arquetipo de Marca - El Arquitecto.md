@@ -1,4 +1,4 @@
----
+﻿---
 title: "Arquetipo de Marca - El Arquitecto"
 tags:
   - arquetipo
@@ -39,5 +39,5 @@ El Arquitecto se opone al **Reparatodo** (etapa anterior de Adrián):
 
 - [[Diferenciación - Inventor vs Técnico]] — la diferenciación que el Arquitecto encarna
 - [[Concepto Central - De aislado a conectado]] — la transformación que lidera
-- [[Metodología - 5 pasos SOM-U]] — el proceso que el Arquitecto aplica
+- [[Metodología - 5 pasos SOM-OS]] — el proceso que el Arquitecto aplica
 - [[Insight de Origen - Tecnología como refugio]] — la raíz que le da autoridad

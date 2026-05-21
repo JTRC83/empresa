@@ -1,16 +1,16 @@
----
-title: "Metodología - 5 pasos SOM-U"
+﻿---
+title: "Metodología - 5 pasos SOM-OS.dev"
 tags:
   - metodología
-  - SOM-U
+  - SOM-OS.dev
   - arquitectura
   - proceso
 category: concepto
 ---
 
-# Metodología - 5 pasos SOM-U
+# Metodología - 5 pasos SOM-OS
 
-Proceso operativo de trabajo de SOM-U para la arquitectura de sistemas digitales.
+Proceso operativo de trabajo de SOM-OS.dev para la arquitectura de sistemas digitales.
 
 ## Los 5 pasos
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Territorio Visual - Burbuja Nodo Sistema Vivo"
 tags:
   - territorio-visual
@@ -28,7 +28,7 @@ Metáfora visual principal validada en la actualización de marca. Representa un
 - Capas organizadas
 - Flujo interno
 - Todo conectado dentro del sistema
-- Aquí nace [[Naming - SOM OS|SOM-U]]
+- Aquí nace [[Naming - SOM OS|SOM-OS.dev]]
 
 ### Fase 4: Expansión / Conexión externa
 - El sistema se conecta con otros

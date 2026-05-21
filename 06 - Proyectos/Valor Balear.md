@@ -1,4 +1,4 @@
----
+﻿---
 title: "Valor Balear"
 tags:
   - proyecto
@@ -13,7 +13,7 @@ tags:
   - stripe-connect
   - webhooks
   - e-commerce
-  - som-u
+  - SOM-OS.dev
   - ecosistema
 category: proyecto
 url: ""
@@ -649,7 +649,7 @@ El modelo Valor Balear es replicable en cualquier región con identidad cultural
 
 ### 2. IA integrada — asistentes inteligentes
 
-Conectando con [[Atenfy]] y el stack IA del ecosistema SOM-U:
+Conectando con [[Atenfy]] y el stack IA del ecosistema SOM-OS:
 
 | Feature | Descripción | Tecnología |
 |---------|-------------|------------|
@@ -813,7 +813,7 @@ flowchart LR
 
 ## Relaciones
 
-- Parte del ecosistema SOM-U
+- Parte del ecosistema SOM-OS
 - Construido sobre [[Foundation]] como base técnica (monorepo NestJS + Nuxt)
 - Complementa [[Atenfy]] para atención al cliente automatizada
 - Podría usar [[CanvasAPI]] para generar contenido visual de marketing

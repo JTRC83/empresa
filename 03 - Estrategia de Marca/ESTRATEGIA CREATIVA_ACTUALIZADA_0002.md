@@ -1,12 +1,12 @@
----
-title: "Estrategia Creativa Actualizada - SOM-U"
+﻿---
+title: "Estrategia Creativa Actualizada - SOM-OS.dev"
 source: "ESTRATEGIA CREATIVA_ACTUALIZADA_0002.pdf"
 date_extracted: "2026-04-23"
 tags:
   - estrategia-creativa
   - marca
   - naming
-  - SOM-U
+  - SOM-OS.dev
   - posicionamiento
   - diferenciación
   - tagline
@@ -24,9 +24,9 @@ Insight clave actualizado  Adrián no es un “consultor de IA”.  Es un constr
 
 Evolución del concepto  De:  “De aislado a conectado”  A:  “De componentes aislados a sistemas operativos inteligentes”  Concepto central definitivo  Sistema Operativo Empresarial  La marca representa:  La unión de piezas sueltas  La activación de inteligencia (IA)  La creación de sistemas que no solo ejecutan   →   proponen  Nueva definición de marca  SOM no construye herramientas. Diseña sistemas operativos que hacen funcionar el negocio como un todo.
 
-Opción validada estratégicamente  SOM-U  Justificación (CLAVE)  Este naming es extremadamente potente porque:  1. Tiene raíz emocional  SOM   →   somos, comunidad, conexión  2. Tiene profundidad técnica REAL  OS   →   Operating System  No es estético   →   es estructural  3. Une los dos mundos  Humano + tecnológico  Comunidad + sistema  Lectura de marca  SOM-U = El sistema operativo que conecta personas, procesos y tecnología  2. NAMING
+Opción validada estratégicamente  SOM-OS.dev  Justificación (CLAVE)  Este naming es extremadamente potente porque:  1. Tiene raíz emocional  SOM   →   somos, comunidad, conexión  2. Tiene profundidad técnica REAL  OS   →   Operating System  No es estético   →   es estructural  3. Une los dos mundos  Humano + tecnológico  Comunidad + sistema  Lectura de marca  SOM-OS.dev = El sistema operativo que conecta personas, procesos y tecnología  2. NAMING
 
-Posicionamiento implícito  Sin explicarlo directamente, comunica:  Arquitectura  Control  Integración  Inteligencia  Recomendación de uso  Marca principal:  SOM-U  Firma de autoridad:  by Adrián Colom  Escalabilidad futura  SOM-U Core  SOM-U Network  SOM-U AI  SOM-U Systems  Naming preparado para ecosistema (MUY IMPORTANTE)
+Posicionamiento implícito  Sin explicarlo directamente, comunica:  Arquitectura  Control  Integración  Inteligencia  Recomendación de uso  Marca principal:  SOM-OS.dev  Firma de autoridad:  by Adrián Colom  Escalabilidad futura  SOM-OS Core  SOM-OS Network  SOM-OS AI  SOM-OS Systems  Naming preparado para ecosistema (MUY IMPORTANTE)
 
 Nueva formulación  Diseñamos   sistemas   operativos   empresariales   que   integran personas, procesos e inteligencia artificial para que tu negocio funcione como un sistema conectado, eficiente y proactivo.  Traducción clara  Unificas lo que está separado  Automatizas con sentido  Activas inteligencia (no solo automatización)  Diferencia clave  No automatizas tareas  Creas lógica operativa del negocio  3. PROPUESTA DE VALOR
 
@@ -38,7 +38,7 @@ Identidad visual  Debe representar:  Sistema operativo  Flujo de datos  Conexió
 
 Lo que te hace único (muy importante)  1 . Piensas como sistema, no como herramienta  2 . Conectas negocio + tecnología + personas  3 . Introduces IA como inteligencia, no como moda  4 . Creas oportunidades (no solo eficiencia)  7. DIFERENCIACIÓN FINAL
 
-Este feedback ha llevado la marca a un nivel superior:  De consultoría   →   a infraestructura de negocio  Definición final  SOM-U   es   el   sistema   operativo   que   transforma   negocios fragmentados en sistemas inteligentes, conectados y en constante evolución.  8. CIERRE ESTRATÉGICO
+Este feedback ha llevado la marca a un nivel superior:  De consultoría   →   a infraestructura de negocio  Definición final  SOM-OS.dev   es   el   sistema   operativo   que   transforma   negocios fragmentados en sistemas inteligentes, conectados y en constante evolución.  8. CIERRE ESTRATÉGICO
 
 
 

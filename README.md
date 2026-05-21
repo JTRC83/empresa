@@ -1,6 +1,6 @@
-# SOM-U Vault — Obsidian Knowledge Base
+﻿# SOM-OS.dev Vault — Obsidian Knowledge Base
 
-> Vault de estrategia de marca **SOM-U by Adrian Colom** con tooling de IA.
+> Vault de estrategia de marca **SOM-OS.dev by Adrian Colom** con tooling de IA.
 
 ## Estructura
 

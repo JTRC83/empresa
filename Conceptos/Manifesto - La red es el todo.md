@@ -1,4 +1,4 @@
----
+﻿---
 title: "Manifesto - La red es el todo"
 tags:
   - manifesto
@@ -37,4 +37,4 @@ Ser prácticos. Solucionar desde la sencillez. Si no es simple y funcional, no e
 - [[Hito Narrativo - La noche de la pizarra 5 junio 2025]] — el momento que engendra este manifesto
 - [[Insight de Origen - Tecnología como refugio]] — la raíz emocional
 - [[Concepto Central - De aislado a conectado]] — la transición que proclama
-- [[Naming - SOM OS|SOM-U]] — la marca que lo materializa
+- [[Naming - SOM OS|SOM-OS.dev]] — la marca que lo materializa

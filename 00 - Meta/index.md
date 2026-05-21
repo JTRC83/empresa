@@ -14,5 +14,5 @@ folder: "00 - Meta"
 
 ## Raíz
 
-- [[Índice Documentos Marca|Índice Documentos Marca]] — El orden lógico de los documentos sigue este flujo: `#meta #índice #marca #documentación`
+- [[Índice Documentos Marca|Índice Documentos Marca]] — title: "Índice Documentos Marca"
 

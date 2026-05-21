@@ -1,4 +1,4 @@
----
+﻿---
 title: "Público Objetivo - Empresarios B2B 25-45"
 tags:
   - público-objetivo
@@ -10,7 +10,7 @@ category: concepto
 
 # Público Objetivo - Empresarios B2B 25-45
 
-Perfil principal definido para la marca SOM-U.
+Perfil principal definido para la marca SOM-OS.dev.
 
 ## Demografía
 

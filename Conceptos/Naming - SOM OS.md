@@ -1,17 +1,17 @@
----
-title: "Naming - SOM-U"
+﻿---
+title: "Naming - SOM-OS.dev"
 tags:
   - naming
-  - SOM-U
+  - SOM-OS.dev
   - marca
   - estrategia
   - sistemas-operativos
 category: concepto
 ---
 
-# Naming - SOM-U
+# Naming - SOM-OS
 
-Opción de naming validada estratégicamente como marca principal del ecosistema SOM-U.
+Opción de naming validada estratégicamente como marca principal del ecosistema SOM-OS.
 
 ## Justificación
 
@@ -21,14 +21,14 @@ Opción de naming validada estratégicamente como marca principal del ecosistema
 
 ## Lectura de marca
 
-> SOM-U = El sistema operativo que conecta personas, procesos y tecnología
+> SOM-OS.dev = El sistema operativo que conecta personas, procesos y tecnología
 
 ## Estructura del ecosistema
 
-- SOM-U Core
-- SOM-U Network
-- SOM-U AI
-- SOM-U Systems
+- SOM-OS Core
+- SOM-OS Network
+- SOM-OS AI
+- SOM-OS Systems
 
 ## Firma de autoridad
 
@@ -37,7 +37,7 @@ Opción de naming validada estratégicamente como marca principal del ecosistema
 ## Relaciones
 
 - [[Naming - COLOM]] — raíz personal del fundador
-- [[Naming - SOM-U]] — variante minimalista del naming
+- [[Naming - SOM-OS]] — variante minimalista del naming
 - [[Concepto Central Actualizado - De componentes aislados a sistemas operativos inteligentes]] — concepto que justifica el naming
-- [[Tagline - El sistema operativo de tu negocio]] — tagline recomendada para SOM-U
+- [[Tagline - El sistema operativo de tu negocio]] — tagline recomendada para SOM-OS.dev
 - [[Propuesta de Valor - Sistemas operativos empresariales]] — propuesta directa

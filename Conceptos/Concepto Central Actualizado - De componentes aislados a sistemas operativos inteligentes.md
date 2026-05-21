@@ -1,10 +1,10 @@
----
+﻿---
 title: "Concepto Central Actualizado - De componentes aislados a sistemas operativos inteligentes"
 tags:
   - concepto-central
   - marca
   - estrategia
-  - SOM-U
+  - SOM-OS.dev
   - sistemas-operativos
 category: concepto
 ---
@@ -37,6 +37,6 @@ El concepto se representa mediante la metáfora de la [[Territorio Visual - Burb
 ## Relaciones
 
 - [[Concepto Central - De aislado a conectado]] — versión fundacional
-- [[Naming - SOM OS|SOM-U]] — marca que encarna este concepto actualizado
+- [[Naming - SOM OS|SOM-OS.dev]] — marca que encarna este concepto actualizado
 - [[Propuesta de Valor - Sistemas operativos empresariales]] — oferta directa derivada
 - [[Tagline - El sistema operativo de tu negocio]] — tagline recomendada

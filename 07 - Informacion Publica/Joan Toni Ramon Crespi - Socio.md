@@ -1,4 +1,4 @@
----
+﻿---
 title: "Joan Toni Ramon Crespi - Socio"
 date: 2026-05-04
 tags:
@@ -9,7 +9,7 @@ tags:
   - inca
   - fotografia
   - ia-generativa
-description: "Joan Toni Ramon Crespi, socio de Adrian Colom en la construccion de la marca SOM-U. Desarrollador web, especialista en IA generativa y fotografa senior."
+description: "Joan Toni Ramon Crespi, socio de Adrian Colom en la construccion de la marca SOM-OS.dev. Desarrollador web, especialista en IA generativa y fotografa senior."
 source: "LinkedIn, Tavily search"
 ---
 
@@ -17,7 +17,7 @@ source: "LinkedIn, Tavily search"
 
 > [!info] Resumen
 > Joan Toni Ramon Crespi es el socio de [[Perfil Publico - Adrian Colom Palacios|Adrian Colom]]
-> en la construccion de la marca SOM-U. Aunque Adrian es la cabeza visible y quien
+> en la construccion de la marca SOM-OS.dev. Aunque Adrian es la cabeza visible y quien
 > dio el paso inicial, Joan Toni co-construye el ecosistema desde su expertise en
 > desarrollo web, IA generativa y produccion visual.
 
@@ -64,10 +64,10 @@ El nombre "WIP&V" posiblemente significa "Work In Progress & Vision".
 - Enfoque: Desarrollo web + produccion fotografica profesional
 - Area: Inca, Mallorca
 
-## Rol en SOM-U
+## Rol en SOM-OS.dev
 
 > [!tip] Contexto
-> Joan Toni es socio de Adrian en el ecosistema SOM-U. Aunque la marca tiene
+> Joan Toni es socio de Adrian en el ecosistema SOM-OS. Aunque la marca tiene
 > a Adrian como fundador principal y cara visible, Joan Toni aporta:
 > - **Desarrollo web y LLMOps** — implementacion tecnica
 > - **Fotografia y produccion visual** — identidad visual de marca

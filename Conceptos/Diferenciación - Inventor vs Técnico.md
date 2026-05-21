@@ -1,4 +1,4 @@
----
+﻿---
 title: "Diferenciación - Inventor vs Técnico"
 tags:
   - diferenciación
@@ -35,5 +35,5 @@ Esta diferenciación permite contar una historia donde el cliente no compra "un 
 
 - [[Arquetipo de Marca - El Arquitecto]] — el arquetipo que encarna esta diferenciación
 - [[Propuesta de Valor - Sistemas operativos empresariales]] — oferta derivada
-- [[Metodología - 5 pasos SOM-U]] — proceso que materializa la diferencia
+- [[Metodología - 5 pasos SOM-OS]] — proceso que materializa la diferencia
 - [[Concepto Central - De aislado a conectado]] — origen emocional de esta distinción

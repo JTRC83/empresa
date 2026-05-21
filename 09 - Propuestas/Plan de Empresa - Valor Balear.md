@@ -1,4 +1,4 @@
----
+﻿---
 title: "Plan de Empresa - Valor Balear"
 date: 2026-05-11
 tags:
@@ -41,7 +41,7 @@ description: "Plan de empresa de Valor Balear siguiendo la plantilla oficial de 
 **Adrián Colom Palacios** — Fundador. Arquitecto de Soluciones IA y Desarrollador Web Full-Stack.
 
 - **Perfil**: Desarrollo de aplicaciones web (NestJS, Nuxt, Vue.js, Node.js, PostgreSQL), automatización de procesos con IA (n8n, Langchain, OpenAI), diseño de sistemas digitales.
-- **Proyectos previos**: Fundación del ecosistema SOM-U: [[Foundation]] (monorepo base), [[Atenfy]] (plataforma IA de atención al cliente), [[CanvasAPI]] (motor de templates visuales), [[GenLegalTxts]] (generador de textos legales). Opera desde Inca (Mallorca).
+- **Proyectos previos**: Fundación del ecosistema SOM-OS: [[Foundation]] (monorepo base), [[Atenfy]] (plataforma IA de atención al cliente), [[CanvasAPI]] (motor de templates visuales), [[GenLegalTxts]] (generador de textos legales). Opera desde Inca (Mallorca).
 - **Rol en Valor Balear**: Desarrollo técnico del Marketplace, arquitectura de sistemas, integración de pagos (Stripe Connect) y logística (Sendcloud), estrategia de negocio.
 
 **Joan Toni Ramon Crespi** — Socio. Desarrollador web, especialista en IA Generativa y Fotógrafo Senior.
@@ -625,5 +625,5 @@ De los 17 ODS, Valor Balear impacta principalmente en:
 - [[CanvasAPI]] — generación de contenido visual
 - [[07 - Información Publica/Perfil Publico - Adrián Colom Palacios]] — fundador
 - [[07 - Información Publica/Joan Toni Ramon Crespi - Socio]] — socio
-- [[Plan de Empresa - Ecosistema SOM-U]] — plan del ecosistema completo
+- [[Plan de Empresa - Ecosistema SOM-OS]] — plan del ecosistema completo
 - Plantilla: ADR Balears / ibempren — Pla d'empresa (Govern de les Illes Balears)

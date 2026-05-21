@@ -1,4 +1,4 @@
----
+﻿---
 title: "Briefing de Marca - Adrián Colom"
 source: "BREAFING_MARCA_0002.pdf"
 date_extracted: "2026-04-23"
@@ -20,7 +20,7 @@ category: estrategia
 
 1. Concepto de marca  2. Propuesta de Naming  3. Taglines o slogans  4. Propuesta de valor  5.Público objetivo  6.Puntos de dolor  7.Beneficios y transformación  8.Resultados y diferenciación  BREAFING MARCA  ADRIAN COLOM  Concepto Central: De aislado a conectado
 
-Concepto central  De Aislado a Conectado  La marca SOM-U no es una consultoría tecnológica convencional. Se posiciona como:  Un puente de arquitectura digital humana  El concepto nace de una transformación real:  De la soledad del creador técnico  A la construcción de sistemas que conectan negocios, personas y tecnología  Territorio conceptual  Tecnología + humanidad  Estructura + claridad  Conexión + comunidad  Traducción estratégica  La marca debe representar:  Orden dentro del caos  Sistemas como “raíles” de crecimiento  Tecnología comprensible, útil y conectada a la realidad del cliente  1. CONCEPTO MARCA
+Concepto central  De Aislado a Conectado  La marca SOM-OS.dev no es una consultoría tecnológica convencional. Se posiciona como:  Un puente de arquitectura digital humana  El concepto nace de una transformación real:  De la soledad del creador técnico  A la construcción de sistemas que conectan negocios, personas y tecnología  Territorio conceptual  Tecnología + humanidad  Estructura + claridad  Conexión + comunidad  Traducción estratégica  La marca debe representar:  Orden dentro del caos  Sistemas como “raíles” de crecimiento  Tecnología comprensible, útil y conectada a la realidad del cliente  1. CONCEPTO MARCA
 
 Naming principal  COLOM  Justificación estratégica:  Apellido del fundador   →   autenticidad y marca personal  Significado   en   catalán:   paloma   →   mensajero,   conexión, regreso al hogar  Representa:  Unión de puntos  Paso de lo individual a lo colectivo  Sistema de naming (expansión futura)  SOM   →   Comunidad (Somos)  TOTOM   →   Red global (Todos)  SOM UN   →   Unidad total (Somos uno)  Dirección creativa naming  Corto, sólido y memorable  Con raíz local (Mallorca) pero proyección global  Capaz de evolucionar hacia ecosistema/marca sistema  2. PROPUESTA NAMING
 

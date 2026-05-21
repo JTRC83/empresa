@@ -1,4 +1,4 @@
----
+﻿---
 title: "Nemus Arboricultura - Empresa de arboricultura en Mallorca"
 date: 2026-05-05
 tags:
@@ -20,7 +20,7 @@ description: "Investigación sobre Nemus Arboricultura y Formación S.L., empres
 
 ## Contexto
 
-Investigación realizada por solicitud directa. No existía información previa sobre esta empresa en el vault. La investigación se justifica por la posible relevancia para el ecosistema SOM-U: ambos operan desde Mallorca, y SOM-U podría potencialmente ofrecer sistemas digitales para negocios locales como este.
+Investigación realizada por solicitud directa. No existía información previa sobre esta empresa en el vault. La investigación se justifica por la posible relevancia para el ecosistema SOM-OS: ambos operan desde Mallorca, y SOM-OS.dev podría potencialmente ofrecer sistemas digitales para negocios locales como este.
 
 ## Hallazgos
 
@@ -76,12 +76,12 @@ Investigación realizada por solicitud directa. No existía información previa 
 - Listada en directorios: Mallorca.com, SoAndSo.es, Empresite, Cinco Días, Expansión
 - Google My Business: sin valoraciones aún (empresa nueva)
 
-## Implicaciones para SOM-U
+## Implicaciones para SOM-OS.dev
 
 ### 1. Sinergia geográfica
 Nemus opera en Inca y Andratx (Mallorca). [[07 - Informacion Publica/Perfil Publico - Adrian Colom Palacios|Adrián Colom]] también reside en **Inca, Mallorca**. Ambos están en la misma ciudad. Esto abre posibilidades de colaboración hiperlocal — misma ciudad, ecosistema empresarial compartido.
 
-### 2. Potencial cliente SOM-U
+### 2. Potencial cliente SOM-OS.dev
 Nemus es una empresa nueva (oct 2024) con presencia digital básica (web WordPress + Instagram). Como negocio local en crecimiento, podría beneficiarse de un [[Conceptos/Concepto Central Actualizado - De componentes aislados a sistemas operativos inteligentes|sistema operativo empresarial]] que integre:
 - Gestión de clientes y presupuestos
 - Calendario de formaciones e inscripciones
@@ -89,13 +89,13 @@ Nemus es una empresa nueva (oct 2024) con presencia digital básica (web WordPre
 - Automatización de presencia digital
 
 ### 3. Alineamiento conceptual
-El enfoque "holístico" y de "sistema" de Nemus resuena con la metáfora central de SOM-U. Ambos hablan de entornos interconectados donde cada parte afecta al todo — Nemus con el ecosistema natural, SOM-U con el ecosistema digital. La frase "los árboles necesitan un entorno saludable y un entorno saludable necesita árboles" es estructuralmente análoga a la filosofía de sistemas de SOM-U.
+El enfoque "holístico" y de "sistema" de Nemus resuena con la metáfora central de SOM-OS.dev. Ambos hablan de entornos interconectados donde cada parte afecta al todo — Nemus con el ecosistema natural, SOM-OS.dev con el ecosistema digital. La frase "los árboles necesitan un entorno saludable y un entorno saludable necesita árboles" es estructuralmente análoga a la filosofía de sistemas de SOM-OS.dev.
 
 ### 4. Conexión ADN Tecnología-Tierra
 [[Conceptos/ADN - Tecnología-Tierra]] define la identidad de Adrián como alguien que "aterriza la innovación avanzada en la realidad empresarial tangible". Pocas empresas son más literales en lo de "tierra" que una empresa de arboricultura. Podría ser un caso de estudio o proyecto piloto que ejemplifique este ADN.
 
 ### 5. Baleares como territorio estratégico
-[[06 - Proyectos/Valor Balear]] ya identifica que "los productos baleares están desconectados de las redes sociales y del alcance digital". Nemus podría ser un ejemplo de empresa balear que necesita exactamente lo que SOM-U ofrece.
+[[06 - Proyectos/Valor Balear]] ya identifica que "los productos baleares están desconectados de las redes sociales y del alcance digital". Nemus podría ser un ejemplo de empresa balear que necesita exactamente lo que SOM-OS.dev ofrece.
 
 ## Relaciones
 
@@ -103,5 +103,5 @@ El enfoque "holístico" y de "sistema" de Nemus resuena con la metáfora central
 - [[Conceptos/ADN - Tecnología-Tierra]] — Nemus como encarnación literal del concepto
 - [[Conceptos/Concepto Central Actualizado - De componentes aislados a sistemas operativos inteligentes]] — Aplicable al caso Nemus
 - [[06 - Proyectos/Valor Balear]] — Contexto del mercado balear
-- [[Conceptos/Propuesta de Valor - Sistemas operativos empresariales]] — Lo que SOM-U podría ofrecer a Nemus
+- [[Conceptos/Propuesta de Valor - Sistemas operativos empresariales]] — Lo que SOM-OS.dev podría ofrecer a Nemus
 - [[Conceptos/Problema - Intoxicación de herramientas]] — Diagnóstico potencialmente aplicable a una empresa nueva que arranca con herramientas digitales básicas

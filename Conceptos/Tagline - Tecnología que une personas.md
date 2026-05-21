@@ -1,4 +1,4 @@
----
+﻿---
 title: "Tagline - Tecnología que une personas"
 tags:
   - tagline
@@ -18,7 +18,7 @@ El cambio de "conectar" a "unir" es muy relevante:
 - **Conectar** → interacción puntual
 - **Unir** → estructura, sistema, comunidad
 
-Este ajuste alinea perfectamente con [[Naming - SOM OS|SOM-U]]: no crea conexiones aisladas, crea sistemas donde las conexiones tienen sentido.
+Este ajuste alinea perfectamente con [[Naming - SOM OS|SOM-OS.dev]]: no crea conexiones aisladas, crea sistemas donde las conexiones tienen sentido.
 
 ## Implicación para el diseño
 

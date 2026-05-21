@@ -1,16 +1,16 @@
----
+﻿---
 title: "Problema - Intoxicación de herramientas"
 tags:
   - problema
   - diagnóstico
-  - SOM-U
+  - SOM-OS.dev
   - dolor-del-cliente
 category: concepto
 ---
 
 # Problema - Intoxicación de herramientas
 
-Diagnóstico central del mercado al que apunta SOM-U. Muchos negocios sufren una sobredosis de tecnología desconectada.
+Diagnóstico central del mercado al que apunta SOM-OS.dev. Muchos negocios sufren una sobredosis de tecnología desconectada.
 
 ## Síntomas
 
@@ -33,7 +33,7 @@ Los empresarios no necesitan más herramientas. Necesitan:
 - Un sistema que conecte procesos, herramientas y personas
 - Una base sólida para crecer sin caos
 
-## La solución SOM-U
+## La solución SOM-OS.dev
 
 > Creamos los raíles del negocio digital, conectando procesos, herramientas y personas.
 
@@ -41,6 +41,6 @@ Los empresarios no necesitan más herramientas. Necesitan:
 
 - [[Público Objetivo - Empresarios B2B 25-45]] — perfil que sufre este problema
 - [[Producto - App central + módulos]] — arquitectura que resuelve la intoxicación
-- [[Metodología - 5 pasos SOM-U]] — proceso que ordena el caos
+- [[Metodología - 5 pasos SOM-OS]] — proceso que ordena el caos
 - [[Propuesta de Valor - Sistemas operativos empresariales]] — la propuesta directa al problema
 - [[Tagline - El sistema operativo de tu negocio]] — mensaje que responde a esta necesidad

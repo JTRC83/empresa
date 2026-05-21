@@ -1,8 +1,8 @@
----
+﻿---
 title: "Propuesta de Valor - Sistemas operativos empresariales"
 tags:
   - propuesta-valor
-  - SOM-U
+  - SOM-OS.dev
   - estrategia
   - diferenciación
 category: concepto
@@ -39,6 +39,6 @@ Sistemas de Sinergia Inteligente
 ## Relaciones
 
 - [[Concepto Central Actualizado - De componentes aislados a sistemas operativos inteligentes]] — concepto que fundamenta esta propuesta
-- [[Naming - SOM OS|SOM-U]] — marca que la materializa
+- [[Naming - SOM OS|SOM-OS.dev]] — marca que la materializa
 - [[Diferenciación - Inventor vs Técnico]] — base diferencial
 - [[Producto - App central + módulos]] — arquitectura que la soporta

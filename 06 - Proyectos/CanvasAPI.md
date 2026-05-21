@@ -1,4 +1,4 @@
----
+﻿---
 title: "CanvasAPI"
 tags:
   - proyecto
@@ -11,7 +11,7 @@ tags:
   - template-engine
   - generación-visual
   - pdf
-  - som-u
+  - SOM-OS.dev
   - ecosistema
 category: proyecto
 url: https://canvas.ikiraisolutions.com/
@@ -90,7 +90,7 @@ Diseñado y desarrollado por **Adrián Colom Palacios**
 
 ## Relaciones
 
-- Parte del ecosistema SOM-U
+- Parte del ecosistema SOM-OS
 - Podría integrarse con [[Foundation]] como base técnica
 - Complementa a [[Atenfy]] para generación de contenido visual automatizado
 - Potencial uso en [[GenLegalTxts]] para generación de documentos visuales

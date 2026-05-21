@@ -1,4 +1,4 @@
----
+﻿---
 title: "GenLegalTxts"
 tags:
   - proyecto
@@ -9,7 +9,7 @@ tags:
   - normativa
   - privacidad
   - cookies
-  - som-u
+  - SOM-OS.dev
   - ecosistema
 category: proyecto
 url: https://www.genlegaltxts.com/
@@ -29,4 +29,4 @@ url: https://www.genlegaltxts.com/
 - Flujo: elige generador → rellena formulario → copia y pega el texto legal
 - Tabla de orientación por tipo de web (ecommerce, informativa, con formularios, etc.)
 - URL: https://www.genlegaltxts.com/
-- Parte del ecosistema SOM-U
+- Parte del ecosistema SOM-OS

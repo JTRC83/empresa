@@ -1,4 +1,4 @@
----
+﻿---
 title: "Concepto Central - De aislado a conectado"
 tags:
   - concepto-central
@@ -11,7 +11,7 @@ category: concepto
 
 # Concepto Central - De aislado a conectado
 
-El concepto central original de la marca SOM-U nace de la transformación personal de [[Adrián Colom]]: del aislamiento del creador técnico a la construcción de sistemas que conectan negocios, personas y tecnología.
+El concepto central original de la marca SOM-OS.dev nace de la transformación personal de [[Adrián Colom]]: del aislamiento del creador técnico a la construcción de sistemas que conectan negocios, personas y tecnología.
 
 ## Origen
 
@@ -29,7 +29,7 @@ Este concepto evolucionó posteriormente hacia [[Concepto Central Actualizado - 
 
 ## Relaciones
 
-- [[Naming - SOM OS|SOM-U]] — la marca que materializa este concepto
+- [[Naming - SOM OS|SOM-OS.dev]] — la marca que materializa este concepto
 - [[Tagline - Tecnología que une personas]] — versión validada por el cliente
 - [[Arquetipo de Marca - El Arquitecto]] — el arquetipo que encarna esta transición
 - [[ADN - Tecnología-Tierra]] — la metáfora que aterriza el concepto

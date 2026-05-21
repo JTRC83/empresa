@@ -12,5 +12,5 @@ folder: "04 - Naming y Tagline"
 
 ## Raíz
 
-- [[NAMING  TAGLINE_0002 (1)|Naming y Tagline - Exploración Estratégica]] — 1. Propuestas naming base SOM. SOM-U  2.Propuestas de taglines  3.Recomendación estratégica final  4.Cierre  NAMING Y TAGLINE  ADRIAN COLOM  Concep... `#naming #tagline #marca #SOM #SOM-U #estrategia-naming #naming-sistema`
+- [[NAMING  TAGLINE_0002 (1)|NAMING  TAGLINE_0002 (1)]] — title: "Naming y Tagline - Exploración Estratégica"
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Hito Narrativo - La noche de la pizarra 5 junio 2025"
 tags:
   - hito-narrativo
@@ -25,7 +25,7 @@ Un mes después, el 5 de julio de 2025, el proyecto se puso en marcha. Este no e
 1. **Tiene fecha exacta**: convierte una transformación abstracta en un evento real
 2. **Tiene escenario**: la pizarra como lienzo de la nueva era
 3. **Tiene contraste**: del silencio infantil a la explosión creativa adulta
-4. **Tiene consecuencia**: el nacimiento de la marca SOM / COLOM / SOM-U
+4. **Tiene consecuencia**: el nacimiento de la marca SOM / COLOM / SOM-OS.dev
 
 ## Uso en storytelling
 

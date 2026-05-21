@@ -1,4 +1,4 @@
----
+﻿---
 title: "Perfil Publico - Adrian Colom Palacios"
 date: 2026-05-04
 tags:
@@ -56,7 +56,7 @@ Proceso de 6 pasos (version publica):
 ```
 
 > [!tip] Nota
-> La metodologia publica tiene 6 pasos. La [[Metodologia - 5 pasos SOM-U|metodologia SOM-U]]
+> La metodologia publica tiene 6 pasos. La [[Metodologia - 5 pasos SOM-OS|metodologia SOM-OS.dev]]
 > tiene 5 pasos. La diferencia es que la version publica separa "Lanzamiento" de "Iteracion".
 
 ## Filosofia
@@ -69,7 +69,7 @@ Citado en ikiraisolutions.com como frase del founder.
 ## Relaciones
 
 - [[Ikirai Solutions - Agencia de IA]] — su agencia de automatizacion
-- [[Joan Toni Ramon Crespi - Socio]] — socio en el ecosistema SOM-U
+- [[Joan Toni Ramon Crespi - Socio]] — socio en el ecosistema SOM-OS
 - [[Presencia Digital - Redes y plataformas]] — todas sus redes sociales
 - [[Proyectos Publicos - URLs y estado]] — proyectos con URLs publicas
 - [[Insight de Origen - Tecnologia como refugio]] — la historia detras de la marca

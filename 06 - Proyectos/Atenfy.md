@@ -1,4 +1,4 @@
----
+﻿---
 title: "Atenfy"
 tags:
   - proyecto
@@ -14,7 +14,7 @@ tags:
   - instagram
   - agenda
   - ventas
-  - som-u
+  - SOM-OS.dev
   - ecosistema
 category: proyecto
 url: https://agent.ikiraisolutions.com/
@@ -190,7 +190,7 @@ Cuando la IA no puede resolver una consulta:
 
 ## Relaciones
 
-- Parte del ecosistema SOM-U
+- Parte del ecosistema SOM-OS
 - Construido sobre [[Foundation]] como base técnica
 - Complementa [[CanvasAPI]] para generación de contenido visual
 - [[GenLegalTxts]] podría integrarse para textos legales de los bots

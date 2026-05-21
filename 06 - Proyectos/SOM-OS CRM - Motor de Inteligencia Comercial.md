@@ -1,5 +1,5 @@
----
-title: "SOM-U CRM - Motor de Inteligencia Comercial"
+﻿---
+title: "SOM-OS CRM - Motor de Inteligencia Comercial"
 date: 2026-05-12
 tags:
   - proyecto
@@ -7,7 +7,7 @@ tags:
   - outreach
   - ia
   - foundation
-  - som-u
+  - SOM-OS.dev
   - ecosistema
   - linkedin
   - lead-generation
@@ -16,10 +16,10 @@ status: diseño
 description: "Sistema CRM + motor de outreach canal-agnóstico construido sobre Foundation. Centraliza inteligencia de contactos, enriquece empresas automáticamente con IA, genera propuestas visuales personalizadas, y gestiona relaciones multicanal desde un solo lugar."
 ---
 
-# SOM-U CRM — Motor de Inteligencia Comercial
+# SOM-OS CRM — Motor de Inteligencia Comercial
 
 > [!info] Visión general
-> Un CRM **no inflado** que centraliza la inteligencia sobre cada contacto y empresa. Construido como extensión de [[Foundation]], hereda auth, email, storage, CMS y componentes UI. El sistema enriquece leads automáticamente con IA, clasifica su madurez digital, sugiere servicios del ecosistema SOM-U, y permite outreach multicanal (LinkedIn, email, WhatsApp) desde un solo lugar con tracking unificado.
+> Un CRM **no inflado** que centraliza la inteligencia sobre cada contacto y empresa. Construido como extensión de [[Foundation]], hereda auth, email, storage, CMS y componentes UI. El sistema enriquece leads automáticamente con IA, clasifica su madurez digital, sugiere servicios del ecosistema SOM-OS, y permite outreach multicanal (LinkedIn, email, WhatsApp) desde un solo lugar con tracking unificado.
 
 ---
 
@@ -27,7 +27,7 @@ description: "Sistema CRM + motor de outreach canal-agnóstico construido sobre 
 
 ### El problema que resuelve
 
-SOM-U crece por **boca a boca, eventos y conexiones personales**. Pero cada contacto vive en un lugar distinto: WhatsApp, LinkedIn, memoria, un papel, un email perdido. No hay **un solo lugar** donde ver:
+SOM-OS.dev crece por **boca a boca, eventos y conexiones personales**. Pero cada contacto vive en un lugar distinto: WhatsApp, LinkedIn, memoria, un papel, un email perdido. No hay **un solo lugar** donde ver:
 
 - A quién conocés
 - Cómo lo conociste
@@ -51,7 +51,7 @@ El CRM resuelve esto. Pero además **no te limita a registrar** — te da inteli
 
 - ✅ Un **segundo cerebro** para tus relaciones comerciales
 - ✅ Un **acelerador** que hace el trabajo pesado de investigación por vos
-- ✅ Un **puente** entre el contacto y los productos del ecosistema SOM-U
+- ✅ Un **puente** entre el contacto y los productos del ecosistema SOM-OS
 
 ---
 
@@ -59,7 +59,7 @@ El CRM resuelve esto. Pero además **no te limita a registrar** — te da inteli
 
 Esta es la decisión más importante del diseño.
 
-El [[Concepto Central Actualizado - De componentes aislados a sistemas operativos inteligentes]] dice: SOM-U transforma componentes aislados en sistemas operativos inteligentes. Pero una pequeña empresa no entiende "sistema operativo empresarial." Entiende **"necesito una web."**
+El [[Concepto Central Actualizado - De componentes aislados a sistemas operativos inteligentes]] dice: SOM-OS.dev transforma componentes aislados en sistemas operativos inteligentes. Pero una pequeña empresa no entiende "sistema operativo empresarial." Entiende **"necesito una web."**
 
 La estrategia es híbrida:
 
@@ -75,7 +75,7 @@ Esto implica que:
 - El **CRM clasifica automáticamente** la fase digital de cada empresa y sugiere el servicio real que necesita
 - El **cross-sell del ecosistema** ([[Atenfy]], [[CanvasAPI]], [[GenLegalTxts]]) es orgánico, no forzado
 
-La web que construye SOM-U no es un folleto digital. Es el **núcleo visible de un sistema operativo**. Lo demás — automatizaciones, IA, integraciones — es lo que transforma el negocio.
+La web que construye SOM-OS.dev no es un folleto digital. Es el **núcleo visible de un sistema operativo**. Lo demás — automatizaciones, IA, integraciones — es lo que transforma el negocio.
 
 ---
 
@@ -238,7 +238,7 @@ analog                → web_creation
 digital_basic         → web_creation + genlegaltxts
 automated             → canvasapi + atefy
 ai_integrated         → atefy + sistemas a medida
-expanding             → consultoría SOM-U (evangelizar ecosistema)
+expanding             → consultoría SOM-OS.dev (evangelizar ecosistema)
 ```
 
 **Por qué DeepSeek V4 Flash**: A $0.20/1M tokens input, clasificar 500 leads cuesta ~$0.08. Es irrelevante. La calidad de clasificación es buena (no excelente), por eso cada clasificación incluye un `confidence` score. Si confianza < 0.7, el lead va a revisión manual.
@@ -309,7 +309,7 @@ FASE 3 — Message (tras aceptar, 2-3 días después)
 Para leads donde no hay presencia en LinkedIn o el email es más apropiado:
 
 - AWS SES con warmup progresivo (5 emails/día → 320 emails/día en 3 semanas)
-- Subdominio separado (`out.som-u.com`) para no quemar la reputación del dominio principal
+- Subdominio separado (`out.SOM-OS.dev.com`) para no quemar la reputación del dominio principal
 - Templates Maizzle que Foundation ya tiene
 - Bounce/complaint handling automático vía SNS webhooks
 
@@ -340,7 +340,7 @@ Foundation ya tiene Maizzle + EmailQueueModule + ScheduleModule. 30 minutos de i
 Cada `EngagementEntity` genera un `shortcode` único de 7 caracteres al crearse.
 
 ```
-URL: https://crm.som-u.com/e/aB3xK9m
+URL: https://crm.SOM-OS.dev.com/e/aB3xK9m
 
 Página pública (sin auth) que muestra:
 ┌──────────────────────────────────────────────┐
@@ -478,7 +478,7 @@ High-ticket B2B requiere propuestas personalizadas. Una propuesta generada por I
 
 ---
 
-## 11. Relaciones con el ecosistema SOM-U
+## 11. Relaciones con el ecosistema SOM-OS
 
 | Proyecto | Cómo se integra |
 |----------|----------------|
@@ -487,6 +487,7 @@ High-ticket B2B requiere propuestas personalizadas. Una propuesta generada por I
 | [[CanvasAPI]] | Templates visuales para propuestas y contenido de outreach |
 | [[GenLegalTxts]] | Cross-sell en outreach: "¿Textos legales para tu web?" → GenLegalTxts |
 | [[Valor Balear]] | Los leads de Valor Balear (artesanos, productores) entran al mismo CRM |
+| [[SOM Tap - Tarjeta de Visita Digital Inteligente\|SOM Tap]] | **Fuente principal de leads.** Webhook push automático. Cada contacto recolectado → lead en CRM. OCR con Tesseract.js, IA con DeepSeek V4 Flash. |
 
 ---
 
@@ -543,7 +544,7 @@ High-ticket B2B requiere propuestas personalizadas. Una propuesta generada por I
 
 ---
 
-*Este documento es el plan de diseño del SOM-U CRM. Las decisiones aquí tomadas reflejan el equilibrio entre inteligencia automatizada y simplicidad operativa. El sistema no reemplaza las relaciones humanas — las amplifica.*
+*Este documento es el plan de diseño del SOM-OS CRM. Las decisiones aquí tomadas reflejan el equilibrio entre inteligencia automatizada y simplicidad operativa. El sistema no reemplaza las relaciones humanas — las amplifica.*
 
 EXTRA:
 Tarjeta de visita de la app con QR, este QR le enseñaría un formulario a la persona, pondría su email, número de teléfono y nombre y se le enviaría al correo todos los datos de la empresa, que hacemos, etc. (se registraría como un boca a boca)

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Índice Documentos Marca"
 tags:
   - meta
@@ -11,7 +11,7 @@ category: meta
 # Índice Documentos Marca
 
 > [!info] Visión general
-> Este vault organiza la documentación estratégica de marca para **SOM-U by Adrián Colom**.
+> Este vault organiza la documentación estratégica de marca para **SOM-OS.dev by Adrián Colom**.
 > El proyecto abarca desde el diagnóstico inicial hasta la materialización operativa de la marca.
 
 ## Flujo de documentos
@@ -26,7 +26,7 @@ Diagnóstico → Proceso Creativo → Estrategia → Naming → Arquitectura Ope
 2. **Proceso Creativo** — los 7 días de introspección estratégica
 3. **Estrategia de Marca** — briefing, concepto, propuesta de valor y actualización
 4. **Naming y Tagline** — exploración y validación del naming sistema
-5. **Arquitectura de Negocio** — materialización operativa de SOM-U
+5. **Arquitectura de Negocio** — materialización operativa de SOM-OS.dev
 
 ## Carpetas y documentos principales
 
@@ -39,14 +39,14 @@ Diagnóstico → Proceso Creativo → Estrategia → Naming → Arquitectura Ope
 
 ### [[03 - Estrategia de Marca]]
 - [[03 - Estrategia de Marca/BREAFING_MARCA_0002|Briefing de Marca - Adrián Colom]] — Concepto central, naming, tagline, propuesta de valor
-- [[03 - Estrategia de Marca/ESTRATEGIA CREATIVA_ACTUALIZADA_0002|Estrategia Creativa Actualizada - SOM-U]] — Validación de SOM-U, sistemas operativos
+- [[03 - Estrategia de Marca/ESTRATEGIA CREATIVA_ACTUALIZADA_0002|Estrategia Creativa Actualizada - SOM-OS.dev]] — Validación de SOM-OS.dev, sistemas operativos
 - [[03 - Estrategia de Marca/ACTUALIZACIÓN _MARCA_0002 (1)|Actualización de Marca - Tagline y Concepto Visual]] — Ajustes post-feedback, metáfora visual
 
 ### [[04 - Naming y Tagline]]
 - [[04 - Naming y Tagline/NAMING  TAGLINE_0002 (1)|Naming y Tagline - Exploración Estratégica]] — 5 líneas de naming, categorías de taglines
 
 ### [[05 - Arquitectura de Negocio]]
-- [[05 - Arquitectura de Negocio/SOM - U  — Arquitectura de Sistemas Digitales (2)|SOM-U - Arquitectura de Sistemas Digitales]] — Producto, metodología 5 pasos, servicios
+- [[05 - Arquitectura de Negocio/SOM-OS  — Arquitectura de Sistemas Digitales (2)|SOM-OS.dev - Arquitectura de Sistemas Digitales]] — Producto, metodología 5 pasos, servicios
 
 ### [[99 - Archivo]]
 - [[99 - Archivo/BREAFING_MARCA_0002 (1)|Briefing de Marca - Duplicado (Archivo)]] — Copia archivada del briefing
@@ -68,9 +68,9 @@ Diagnóstico → Proceso Creativo → Estrategia → Naming → Arquitectura Ope
 - [[Arquetipo de Marca - El Arquitecto]]
 
 ### Naming y Mensaje
-- [[Naming - SOM OS|SOM-U]]
+- [[Naming - SOM OS|SOM-OS.dev]]
 - [[Naming - COLOM]]
-- [[Naming - SOM-U]]
+- [[Naming - SOM-OS]]
 - [[Tagline - Tecnología que une personas]]
 - [[Tagline - El sistema operativo de tu negocio]]
 
@@ -83,12 +83,12 @@ Diagnóstico → Proceso Creativo → Estrategia → Naming → Arquitectura Ope
 ### Producto y Metodología
 - [[Producto - App central + módulos]]
 - [[Metodología - Proceso creativo 7 días]]
-- [[Metodología - 5 pasos SOM-U]]
+- [[Metodología - 5 pasos SOM-OS]]
 - [[Territorio Visual - Burbuja Nodo Sistema Vivo]]
 
 ## Productos y Proyectos del Ecosistema
 
-> [!tip] Proyectos concretos del ecosistema SOM-U
+> [!tip] Proyectos concretos del ecosistema SOM-OS
 > Cada proyecto es una manifestación operativa de la marca.
 
 - [[06 - Proyectos/CommitWear|CommitWear]] — marca de ropa con estilo ASCII
@@ -105,4 +105,4 @@ Diagnóstico → Proceso Creativo → Estrategia → Naming → Arquitectura Ope
 
 ---
 
-*Índice generado el 2026-04-23 como parte de la organización de Documentos de Marca SOM-U.*
+*Índice generado el 2026-04-23 como parte de la organización de Documentos de Marca SOM-OS.dev.*

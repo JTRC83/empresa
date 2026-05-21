@@ -1,4 +1,4 @@
----
+﻿---
 title: "Proyectos Publicos - URLs y estado"
 date: 2026-05-04
 tags:
@@ -15,7 +15,7 @@ source: "adriancolom.com, webfetch, Tavily search"
 
 > [!info] Resumen
 > Adrian tiene 6+ proyectos con URLs publicas activas, mas 2 en desarrollo.
-> Cada proyecto es una manifestacion concreta del ecosistema SOM-U.
+> Cada proyecto es una manifestacion concreta del ecosistema SOM-OS.
 
 ## Proyectos activos (live)
 
@@ -46,7 +46,7 @@ source: "adriancolom.com, webfetch, Tavily search"
 | souncloudScrapperNoCopyWave | Python | Scraper de SoundCloud |
 | plotly-dashboard-aemet | Python | Dashboard de datos meteorologicos AEMET |
 
-## Relacion con el ecosistema SOM-U
+## Relacion con el ecosistema SOM-OS
 
 > [!tip] Mapeo al vault
 > Los proyectos en `06 - Proyectos/` son la documentacion estrategica.

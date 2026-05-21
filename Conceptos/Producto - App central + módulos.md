@@ -1,8 +1,8 @@
----
+﻿---
 title: "Producto - App central + módulos"
 tags:
   - producto
-  - SOM-U
+  - SOM-OS.dev
   - arquitectura
   - sistemas-digitales
 category: concepto
@@ -10,7 +10,7 @@ category: concepto
 
 # Producto - App central + módulos
 
-Descripción del producto/servicio core de SOM-U: una aplicación central que actúa como núcleo del ecosistema digital del negocio.
+Descripción del producto/servicio core de SOM-OS.dev: una aplicación central que actúa como núcleo del ecosistema digital del negocio.
 
 ## Estructura
 
@@ -42,7 +42,7 @@ Esto permite:
 
 ## Relaciones
 
-- [[Metodología - 5 pasos SOM-U]] — proceso que entrega este producto
+- [[Metodología - 5 pasos SOM-OS]] — proceso que entrega este producto
 - [[Propuesta de Valor - Sistemas operativos empresariales]] — valor que este producto genera
 - [[Problema - Intoxicación de herramientas]] — problema que esta arquitectura resuelve
 - [[Territorio Visual - Burbuja Nodo Sistema Vivo]] — metáfora visual de esta arquitectura

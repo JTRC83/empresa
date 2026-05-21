@@ -1,4 +1,4 @@
----
+﻿---
 title: "Ikirai Solutions - Agencia de IA"
 date: 2026-05-04
 tags:
@@ -71,13 +71,13 @@ Aplicacion web a medida donde el cliente ve en tiempo real:
 - Google Calendar / Outlook / CRM (integraciones)
 - Servidores europeos, encriptacion E2E
 
-## Relacion con SOM-U
+## Relacion con SOM-OS.dev
 
 > [!tip] Conexion estrategica
-> Ikirai Solutions es la **materializacion operativa** de la marca SOM-U.
-> Mientras SOM-U es la marca conceptual (el "sistema operativo de tu negocio"),
+> Ikirai Solutions es la **materializacion operativa** de la marca SOM-OS.dev.
+> Mientras SOM-OS.dev es la marca conceptual (el "sistema operativo de tu negocio"),
 > Ikirai es la agencia que lo ejecuta. El [[Manifesto - La red es el todo|manifiesto]]
-> y la [[Metodologia - 5 pasos SOM-U|metodologia de 5 pasos]] se aplican a traves de Ikirai.
+> y la [[Metodologia - 5 pasos SOM-OS|metodologia de 5 pasos]] se aplican a traves de Ikirai.
 
 ## Equipo
 
@@ -89,5 +89,5 @@ Aplicacion web a medida donde el cliente ve en tiempo real:
 - [[Perfil Publico - Adrian Colom Palacios]] — el founder
 - [[Presencia Digital - Redes y plataformas]] — presencia online de la agencia
 - [[Proyectos Publicos - URLs y estado]] — proyectos complementarios
-- [[Metodologia - 5 pasos SOM-U]] — la metodologia detras del delivery
+- [[Metodologia - 5 pasos SOM-OS]] — la metodologia detras del delivery
 - [[Diferenciacion - Inventor vs Tecnico]] — el posicionamiento que refleja Ikirai

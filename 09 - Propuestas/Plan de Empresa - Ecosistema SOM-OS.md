@@ -1,12 +1,12 @@
----
-title: "Plan de Empresa - Ecosistema SOM-U"
+﻿---
+title: "Plan de Empresa - ecosistema SOM-OS"
 date: 2026-05-11
 tags:
   - plan-de-empresa
   - estrategia
   - financiero
   - roadmap
-  - SOM-U
+  - SOM-OS.dev
   - ecosistema
   - valor-balear
   - foundation
@@ -14,19 +14,19 @@ tags:
   - canvasapi
 category: plan-de-empresa
 status: activo
-description: "Plan de empresa integral del ecosistema SOM-U by Adrian Colom. Cubre los 7 proyectos, su modelo de negocio, proyecciones financieras, estrategia de go-to-market y roadmap de ejecucion. Valor Balear como proyecto prioritario de generacion de caja."
+description: "Plan de empresa integral del ecosistema SOM-OS by Adrian Colom. Cubre los 7 proyectos, su modelo de negocio, proyecciones financieras, estrategia de go-to-market y roadmap de ejecucion. Valor Balear como proyecto prioritario de generacion de caja."
 ---
 
-# Plan de Empresa - Ecosistema SOM-U
+# Plan de Empresa - Ecosistema SOM-OS
 
 > [!info] Resumen ejecutivo
-> SOM-U es un ecosistema de **7 productos digitales interconectados** que comparten una base tecnica comun ([[Foundation]]) y una filosofia de marca: disenar sistemas operativos empresariales que integran personas, procesos e IA. El plan prioriza **Valor Balear** como proyecto tractor de facturacion a corto plazo, mientras los productos SaaS ([[Atenfy]], [[CanvasAPI]]) maduran su modelo recurrente. La consultoria SOM-U actua como motor de origen y laboratorio de I+D.
+> SOM-OS.dev es un ecosistema de **7 productos digitales interconectados** que comparten una base tecnica comun ([[Foundation]]) y una filosofia de marca: disenar sistemas operativos empresariales que integran personas, procesos e IA. El plan prioriza **Valor Balear** como proyecto tractor de facturacion a corto plazo, mientras los productos SaaS ([[Atenfy]], [[CanvasAPI]]) maduran su modelo recurrente. La consultoria SOM-OS.dev actua como motor de origen y laboratorio de I+D.
 
 ---
 
 ## 1. El Ecosistema
 
-### 1.1 Marca paraguas: SOM-U
+### 1.1 Marca paraguas: SOM-OS.dev
 
 **Propuesta de valor**: Disenamos sistemas operativos empresariales que integran personas, procesos e inteligencia artificial para que tu negocio funcione como un sistema conectado, eficiente y proactivo.
 
@@ -44,7 +44,7 @@ description: "Plan de empresa integral del ecosistema SOM-U by Adrian Colom. Cub
 | 4 | **[[Foundation]]** | Infraestructura | Interno (ahorro de costes) | Activo | P3 - Base |
 | 5 | **[[GenLegalTxts]]** | SaaS B2B/B2C | Freemium / trafico | Activo | P3 - Trafico |
 | 6 | **[[CommitWear]]** | E-commerce B2C | Venta de producto fisico | Idea | P4 - Experimental |
-| 7 | **SOM-U Consultoria** | Servicio B2B | Proyecto + membresia | Activo | P2 - Caja inicial |
+| 7 | **SOM-OS Consultoría** | Servicio B2B | Proyecto + membresia | Activo | P2 - Caja inicial |
 
 ### 1.3 Sinergias entre proyectos
 
@@ -62,7 +62,7 @@ flowchart TB
     GL -.->|Terminos legales| VB
     AT -.->|Contenido visual| CA
     
-    SOMU[SOM-U Consultoria] -->|I+D + clientes| F
+    SOMU[SOM-OS Consultoría] -->|I+D + clientes| F
     SOMU -->|Proyectos a medida| AT
     SOMU -->|Proyectos a medida| CA
     
@@ -224,13 +224,13 @@ Ver detalle completo en [[Valor Balear#Roadmap Sugerido]].
 | Ticket premium (unico) | 15 | 15 | 15 |
 | **Ingresos** | 300 | 2,250 | 6,750 |
 
-### 3.4 SOM-U Consultoria
+### 3.4 SOM-OS Consultoría
 
 | Concepto | Detalle |
 |----------|---------|
 | **Servicio** | Arquitectura de sistemas digitales para empresas |
 | **Modelo** | Proyecto (presupuesto cerrado) + membresia opcional (iteracion) |
-| **Metodologia** | [[Metodologia - 5 pasos SOM-U]]: Descubrimiento -> Estrategia -> Desarrollo -> Lanzamiento -> Iteracion |
+| **Metodologia** | [[Metodologia - 5 pasos SOM-OS]]: Descubrimiento -> Estrategia -> Desarrollo -> Lanzamiento -> Iteracion |
 | **Rol en el ecosistema** | Genera caja inicial, valida necesidades del mercado, alimenta I+D para los productos SaaS |
 
 **Proyeccion**:
@@ -302,7 +302,7 @@ Con los costes operativos actuales (~638/mes), el punto de equilibrio se alcanza
 | **Mix realista** | 1 proyecto/trimestre + 3 clientes Atenfy + 15 pedidos/mes VB |
 
 > [!important] Realidad actual
-> A mayo 2026, el ecosistema ya genera ingresos via consultoria (SOM-U) y tiene productos SaaS en funcionamiento (Atenfy, CanvasAPI, GenLegalTxts). El punto de equilibrio operativo es alcanzable en el **primer trimestre** de ejecucion de este plan. El objetivo del plan no es "llegar a equilibrio" sino **acelerar el crecimiento** con Valor Balear como multiplicador.
+> A mayo 2026, el ecosistema ya genera ingresos via consultoria (SOM-OS.dev) y tiene productos SaaS en funcionamiento (Atenfy, CanvasAPI, GenLegalTxts). El punto de equilibrio operativo es alcanzable en el **primer trimestre** de ejecucion de este plan. El objetivo del plan no es "llegar a equilibrio" sino **acelerar el crecimiento** con Valor Balear como multiplicador.
 
 ---
 
@@ -313,7 +313,7 @@ Con los costes operativos actuales (~638/mes), el punto de equilibrio se alcanza
 | Elemento | Estado |
 |----------|--------|
 | **Autonomo** | Adrian Colom Palacios, dado de alta en Inca (Mallorca) |
-| **Marcas** | SOM-U y productos bajo la marca personal/autonomo |
+| **Marcas** | SOM-OS.dev y productos bajo la marca personal/autonomo |
 | **Facturacion** | Consultoria y proyectos via autonomo |
 | **Dominios** | Multiples dominios registrados (ikiraisolutions.com, genlegaltxts.com, etc.) |
 
@@ -327,7 +327,7 @@ A medida que Valor Balear escale, se recomienda constituir una **Sociedad Limita
 | **Estructura** | SL unipersonal o con socio (Joan Toni Ramon Crespi para el area visual) |
 | **Ventajas** | Responsabilidad limitada, imagen corporativa, deduccion de gastos |
 | **Coste** | ~3,000 constitucion + ~1,500/ano gestoria |
-| **Nombre propuesto** | SOM-U Sistemas Digitales SL o Valor Balear Marketplace SL |
+| **Nombre propuesto** | SOM-OS Sistemas Digitales SL o Valor Balear Marketplace SL |
 
 ### 5.3 Obligaciones fiscales del marketplace
 
@@ -348,7 +348,7 @@ Como marketplace que intermedia pagos, Valor Balear debe cumplir:
 
 ```mermaid
 gantt
-    title Ecosistema SOM-U - Go-to-Market
+    title ecosistema SOM-OS - Go-to-Market
     dateFormat  YYYY-MM
     axisFormat  %b %Y
 
@@ -419,7 +419,7 @@ gantt
 
 ### 8.2 OKR Ecosistema (Ano 1)
 
-**Objetivo**: Validar que el ecosistema SOM-U genera ingresos diversificados y sostenibles
+**Objetivo**: Validar que el ecosistema SOM-OS genera ingresos diversificados y sostenibles
 
 | Key Result | Target |
 |------------|--------|
@@ -459,7 +459,7 @@ gantt
 - [[Foundation]] - base tecnica del ecosistema
 - [[GenLegalTxts]] - generador de textos legales
 - [[CommitWear]] - marca de ropa dev
-- [[Metodologia - 5 pasos SOM-U]] - metodologia de consultoria
+- [[Metodologia - 5 pasos SOM-OS]] - metodologia de consultoria
 - [[Propuesta de Valor - Sistemas operativos empresariales]] - propuesta de valor central
 - [[ADN - Tecnologia-Tierra]] - ADN diferencial de la marca
 - [[08 - Clientes/Nemus Arboricultura]] - cliente potencial Fase 6 de Valor Balear

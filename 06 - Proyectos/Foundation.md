@@ -1,4 +1,4 @@
----
+﻿---
 title: "Foundation"
 tags:
   - proyecto
@@ -15,7 +15,7 @@ tags:
   - hexagonal
   - typeorm
   - postgresql
-  - som-u
+  - SOM-OS.dev
   - ecosistema
 category: proyecto
 url: ""
@@ -26,7 +26,7 @@ status: activo
 # Foundation
 
 > [!info] Visión general
-> Foundation es una **plantilla modular SaaS** construida como monorepo Turborepo. Es la base técnica sobre la que se construyen los proyectos del ecosistema SOM-U. Incluye backend (NestJS + TypeORM + PostgreSQL), frontend (Nuxt 3 + Vue 3), autenticación, billing, CMS, sistema de extensiones auto-descubribles, y búsqueda semántica de código vía MCP Vector Search.
+> Foundation es una **plantilla modular SaaS** construida como monorepo Turborepo. Es la base técnica sobre la que se construyen los proyectos del ecosistema SOM-OS. Incluye backend (NestJS + TypeORM + PostgreSQL), frontend (Nuxt 3 + Vue 3), autenticación, billing, CMS, sistema de extensiones auto-descubribles, y búsqueda semántica de código vía MCP Vector Search.
 
 ## Stack Tecnológico
 
@@ -613,7 +613,8 @@ pnpm test                         # Jest
 
 ## Relaciones
 
-- Es la **base técnica** sobre la que se construyen otros proyectos del ecosistema SOM-U
+- Es la **base técnica** sobre la que se construyen otros proyectos del ecosistema SOM-OS
 - [[Atenfy]] — podría construirse sobre Foundation (NestJS + Nuxt + auth + billing)
 - [[CanvasAPI]] — podría usar Foundation como base
 - [[GenLegalTxts]] — podría usar Foundation como base
+- [[SOM Tap - Tarjeta de Visita Digital Inteligente|SOM Tap]] — construido sobre Foundation (NestJS + Nuxt + CapacitorJS). OCR con Tesseract.js, IA con DeepSeek V4 Flash.
