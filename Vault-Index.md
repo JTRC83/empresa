@@ -45,13 +45,16 @@ scope: vault
 │   ├── 📄 Presencia Digital - Redes y plataformas.md
 │   ├── 📄 Proyectos Publicos - URLs y estado.md
 ├── 📁 08 - Clientes/
+│   ├── 📄 Lorenç Prats - Telecomunicaciones y Parkings IA.md
 │   ├── 📄 Nemus Arboricultura.md
 │   ├── 📄 Sando Capital - Javier Sandoval Haro.md
 ├── 📁 09 - Propuestas/
 │   ├── 📄 Brief de Diseño - SOM-OS.md
 │   ├── 📄 Nemus Digital.md
+│   ├── 📄 Parkings IA - Sistema híbrido de gestión de incidencias.md
 │   ├── 📄 Plan de Empresa - Ecosistema SOM-OS.md
 │   ├── 📄 Plan de Empresa - Valor Balear.md
+│   ├── 📄 Sando Capital - Presupuesto Web + Sistema.md
 ├── 📁 99 - Archivo/
 │   ├── 📄 BREAFING_MARCA_0002 (1).md
 ├── 📁 Conceptos/
@@ -77,8 +80,10 @@ scope: vault
 │   ├── 📄 Tagline - Tecnología que une personas.md
 │   ├── 📄 Territorio Visual - Burbuja Nodo Sistema Vivo.md
 ├── 📄 README.md
+├── 🎨 Sin título.canvas
 ├── 📁 archivos/
 ├── 📎 docker-compose.yml
+├── 📎 hero-section.png
 ├── 📎 start.mjs
 └── 📎 start.ps1
 ```
@@ -130,17 +135,20 @@ scope: vault
 - [[07 - Informacion Publica/Presencia Digital - Redes y plataformas|Presencia Digital - Redes y plataformas]] — Todas las plataformas y redes sociales donde Adrian Colom Palacios tiene presencia publica activa.
 - [[07 - Informacion Publica/Proyectos Publicos - URLs y estado|Proyectos Publicos - URLs y estado]] — title: "Proyectos Publicos - URLs y estado"
 
-## 08 - Clientes (2)
+## 08 - Clientes (3)
 
+- [[08 - Clientes/Lorenç Prats - Telecomunicaciones y Parkings IA|Lorenç Prats — Telecomunicaciones y Parkings con IA]] — Ficha de cliente de Lorenç Prats, profesional del sector telecomunicaciones con acceso a managers de parkings. Propon...
 - [[08 - Clientes/Nemus Arboricultura|Nemus Arboricultura]] — title: "Nemus Arboricultura - Empresa de arboricultura en Mallorca"
 - [[08 - Clientes/Sando Capital - Javier Sandoval Haro|Sando Capital - Intermediario de inversiones B2C]] — Ficha de cliente de Javier Sandoval Haro, fundador de Sando Capital. Opera como puente entre el sector de inversiones...
 
-## 09 - Propuestas (4)
+## 09 - Propuestas (6)
 
 - [[09 - Propuestas/Brief de Diseño - SOM-OS|Brief de Diseño — SOM-OS]] — Brief de identidad visual del ecosistema SOM-OS para el diseñador. Incluye concepto de marca, personalidad, territori...
 - [[09 - Propuestas/Nemus Digital|Propuesta Nemus Digital — Sistema de gestión de arboricultura y formaciones]] — Propuesta de sistema digital para Nemus Arboricultura: digitalización del flujo de trabajo de campo (fichas, presupue...
+- [[09 - Propuestas/Parkings IA - Sistema híbrido de gestión de incidencias|Propuesta Parkings IA — Sistema híbrido de gestión de incidencias]] — Propuesta de sistema híbrido para gestión de incidencias en parkings mediante IA. Combina dos canales: tablet/kiosko ...
 - [[09 - Propuestas/Plan de Empresa - Ecosistema SOM-OS|Plan de Empresa - Ecosistema SOM-OS]] — title: "Plan de Empresa - ecosistema SOM-OS"
 - [[09 - Propuestas/Plan de Empresa - Valor Balear|Plan de Empresa - Valor Balear]] — title: "Plan de Empresa - Valor Balear"
+- [[09 - Propuestas/Sando Capital - Presupuesto Web + Sistema|Presupuesto Sando Capital — Web con calculadoras + sistema inteligente]] — Presupuesto para Javier Sandoval Haro (Sando Capital). Fase 1: plataforma completa (CMS + correos + SEO) con web y 7 ...
 
 ## 99 - Archivo (1)
 

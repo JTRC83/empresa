@@ -129,3 +129,4 @@ Esto transforma la relación de "Javier me manda un WhatsApp cuando algo vence" 
 - [[Conceptos/Público Objetivo - Empresarios B2B 25-45]] — Javier encaja en el perfil (emprendedor, B2B/B2C, escalando)
 - [[Conceptos/Naming - COLOM]] — Paralelo: Sando deriva de Sandoval, como Colom deriva del apellido
 - [[08 - Clientes/Nemus Arboricultura]] — Otro cliente potencial en el vault, contraste de sectores
+- [[Sando Capital - Presupuesto Web + Sistema]] — Presupuesto Fase 1 (web + calculadoras) y Fase 2 (Foundation + IA)
