@@ -63,6 +63,7 @@ scope: vault
 │   ├── 📄 Concepto Central - De aislado a conectado.md
 │   ├── 📄 Concepto Central Actualizado - De componentes aislados a sistemas operativos inteligentes.md
 │   ├── 📄 Diferenciación - Inventor vs Técnico.md
+│   ├── 📄 Estilo Web - Profesional Financiero.md
 │   ├── 📄 Hito Narrativo - La noche de la pizarra 5 junio 2025.md
 │   ├── 📄 Insight de Origen - Tecnología como refugio.md
 │   ├── 📄 Manifesto - La red es el todo.md
@@ -74,16 +75,18 @@ scope: vault
 │   ├── 📄 Naming - Tarjeta de Visita Digital (SOM Tap).md
 │   ├── 📄 Problema - Intoxicación de herramientas.md
 │   ├── 📄 Producto - App central + módulos.md
+│   ├── 📄 Prompt Web - SOM-OS.dev.md
+│   ├── 📄 Prompt Web - Sando Capital.md
 │   ├── 📄 Propuesta de Valor - Sistemas operativos empresariales.md
 │   ├── 📄 Público Objetivo - Empresarios B2B 25-45.md
 │   ├── 📄 Tagline - El sistema operativo de tu negocio.md
 │   ├── 📄 Tagline - Tecnología que une personas.md
 │   ├── 📄 Territorio Visual - Burbuja Nodo Sistema Vivo.md
 ├── 📄 README.md
-├── 🎨 Sin título.canvas
 ├── 📁 archivos/
 ├── 📎 docker-compose.yml
 ├── 📎 hero-section.png
+├── 📎 skills-lock.json
 ├── 📎 start.mjs
 └── 📎 start.ps1
 ```
@@ -154,13 +157,14 @@ scope: vault
 
 - [[99 - Archivo/BREAFING_MARCA_0002 (1)|Briefing de Marca - Duplicado (Archivo)]] — 1. Concepto de marca  2. Propuesta de Naming  3. Taglines o slogans  4. Propuesta de valor  5.Público objetivo  6.Pun...
 
-## Conceptos (21)
+## Conceptos (24)
 
 - [[Conceptos/ADN - Tecnología-Tierra|ADN - Tecnología-Tierra]] — Concepto identitario que aterriza la innovación avanzada en la realidad empresarial tangible.
 - [[Conceptos/Arquetipo de Marca - El Arquitecto|Arquetipo de Marca - El Arquitecto]] — title: "Arquetipo de Marca - El Arquitecto"
 - [[Conceptos/Concepto Central - De aislado a conectado|Concepto Central - De aislado a conectado]] — title: "Concepto Central - De aislado a conectado"
 - [[Conceptos/Concepto Central Actualizado - De componentes aislados a sistemas operativos inteligentes|Concepto Central Actualizado - De componentes aislados a sistemas operativos inteligentes]] — title: "Concepto Central Actualizado - De componentes aislados a sistemas operativos inteligentes"
 - [[Conceptos/Diferenciación - Inventor vs Técnico|Diferenciación - Inventor vs Técnico]] — title: "Diferenciación - Inventor vs Técnico"
+- [[Conceptos/Estilo Web - Profesional Financiero|Estilo Web — Profesional con alma artesanal]] — Master prompt de estilo reutilizable que combina seriedad profesional con calidez artesanal. Usa Coocomaterial (ilust...
 - [[Conceptos/Hito Narrativo - La noche de la pizarra 5 junio 2025|Hito Narrativo - La noche de la pizarra 5 junio 2025]] — title: "Hito Narrativo - La noche de la pizarra 5 junio 2025"
 - [[Conceptos/Insight de Origen - Tecnología como refugio|Insight de Origen - Tecnología como refugio]] — Núcleo narrativo diferencial de la marca. La historia de origen de Adrián Colom explica tanto su enorme capacidad téc...
 - [[Conceptos/Manifesto - La red es el todo|Manifesto - La red es el todo]] — title: "Manifesto - La red es el todo"
@@ -172,6 +176,8 @@ scope: vault
 - [[Conceptos/Naming - Tarjeta de Visita Digital (SOM Tap)|Naming - Tarjeta de Visita Digital (SOM Tap)]] — title: "Naming - Tarjeta de Visita Digital (Somos Tap)"
 - [[Conceptos/Problema - Intoxicación de herramientas|Problema - Intoxicación de herramientas]] — title: "Problema - Intoxicación de herramientas"
 - [[Conceptos/Producto - App central + módulos|Producto - App central + módulos]] — title: "Producto - App central + módulos"
+- [[Conceptos/Prompt Web - SOM-OS.dev|Prompt Web — SOM-OS.dev]] — Master prompt para generar la web de SOM-OS.dev by Adrián Colom & Joan Toni Ramon Crespi. Combina el arquetipo del Ar...
+- [[Conceptos/Prompt Web - Sando Capital|Prompt Web — Sando Capital]] — Master prompt para generar la web de Sando Capital by Javier Sandoval Haro. Combinación del estilo Coocomaterial (pro...
 - [[Conceptos/Propuesta de Valor - Sistemas operativos empresariales|Propuesta de Valor - Sistemas operativos empresariales]] — title: "Propuesta de Valor - Sistemas operativos empresariales"
 - [[Conceptos/Público Objetivo - Empresarios B2B 25-45|Público Objetivo - Empresarios B2B 25-45]] — title: "Público Objetivo - Empresarios B2B 25-45"
 - [[Conceptos/Tagline - El sistema operativo de tu negocio|Tagline - El sistema operativo de tu negocio]] — title: "Tagline - El sistema operativo de tu negocio"
