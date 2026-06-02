@@ -611,6 +611,16 @@ pnpm test                         # Jest
 - ⚠️ Carpeta `extensions/` vacía — todas las features en `modules/`
 - ⚠️ No hay directorio `packages/` a pesar de estar en workspace
 
+## Documentación Técnica
+
+> [!tip] Documentación detallada de módulos
+> La carpeta [[Foundation/index|Foundation/]] contiene documentación técnica exhaustiva de todos los módulos, extensiones y subsistemas:
+> - [[Foundation/Modulos/index|Módulos Backend]] — IAM, Users, Storage, Communications, Error Tracker, Translations, Billing
+> - [[Foundation/Extensiones/index|Extensiones]] — Sistema de Extensiones, CMS, Stripe
+> - [[Foundation/Frontend/index|Frontend]] — Landing, Auth, UI App, Translations, Error Tracker, Storage
+> - [[Foundation/Core - Sistema de Núcleo|Core]] — Extension Loader, Foundation Module, Infrastructure Module
+> - [[Foundation/MCP Vector Search - Buscador Semántico|MCP Vector Search]] — Buscador semántico (histórico)
+
 ## Relaciones
 
 - Es la **base técnica** sobre la que se construyen otros proyectos del ecosistema SOM-OS

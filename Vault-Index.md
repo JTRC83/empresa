@@ -32,6 +32,24 @@ scope: vault
 │   ├── 📄 Atenfy.md
 │   ├── 📄 CanvasAPI.md
 │   ├── 📄 CommitWear.md
+│   ├── 📁 Foundation/
+│   │   ├── 📄 Core - Sistema de Núcleo.md
+│   │   ├── 📁 Extensiones/
+│   │   │   ├── 📄 CMS - Content Management System.md
+│   │   │   ├── 📄 Landing - Paginas Publicas.md
+│   │   │   ├── 📄 Sistema de Extensiones.md
+│   │   │   ├── 📄 Stripe - Integracion de Pagos.md
+│   │   ├── 📄 Graphify - Knowledge Graph y OpenCode.md
+│   │   ├── 📄 Infraestructura - Base de Datos y Utilidades.md
+│   │   ├── 📁 Modulos/
+│   │   │   ├── 📄 Billing - Facturacion.md
+│   │   │   ├── 📄 Communications - Comunicaciones y Email.md
+│   │   │   ├── 📄 Error Tracker - Monitoreo de Errores.md
+│   │   │   ├── 📄 IAM - Identity y Access Management.md
+│   │   │   ├── 📄 Storage - Sistema de Archivos.md
+│   │   │   ├── 📄 Translations - Internacionalizacion.md
+│   │   │   ├── 📄 UI App - Toolkit de Componentes.md
+│   │   │   ├── 📄 Users - Gestión de Usuarios.md
 │   ├── 📄 Foundation.md
 │   ├── 📄 GenLegalTxts.md
 │   ├── 📄 SOM Tap - Tarjeta de Visita Digital Inteligente.md
@@ -60,6 +78,7 @@ scope: vault
 ├── 📁 Conceptos/
 │   ├── 📄 ADN - Tecnología-Tierra.md
 │   ├── 📄 Arquetipo de Marca - El Arquitecto.md
+│   ├── 📄 Comparativa - Foundation vs TanStack Start.md
 │   ├── 📄 Concepto Central - De aislado a conectado.md
 │   ├── 📄 Concepto Central Actualizado - De componentes aislados a sistemas operativos inteligentes.md
 │   ├── 📄 Diferenciación - Inventor vs Técnico.md
@@ -79,12 +98,11 @@ scope: vault
 │   ├── 📄 Prompt Web - Sando Capital.md
 │   ├── 📄 Propuesta de Valor - Sistemas operativos empresariales.md
 │   ├── 📄 Público Objetivo - Empresarios B2B 25-45.md
+│   ├── 📄 Stack Actual - Inventario y Roadmap de Migración.md
 │   ├── 📄 Tagline - El sistema operativo de tu negocio.md
 │   ├── 📄 Tagline - Tecnología que une personas.md
 │   ├── 📄 Territorio Visual - Burbuja Nodo Sistema Vivo.md
 ├── 📄 README.md
-├── 📁 archivos/
-├── 📎 docker-compose.yml
 ├── 📎 hero-section.png
 ├── 📎 skills-lock.json
 ├── 📎 start.mjs
@@ -118,11 +136,26 @@ scope: vault
 
 - [[05 - Arquitectura de Negocio/SOM-OS — Arquitectura de Sistemas Digitales|SOM-OS — Arquitectura de Sistemas Digitales]] — title: "SOM-OS.dev - Arquitectura de Sistemas Digitales"
 
-## 06 - Proyectos (9)
+## 06 - Proyectos (24)
 
 - [[06 - Proyectos/Atenfy|Atenfy]] — title: "Atenfy"
 - [[06 - Proyectos/CanvasAPI|CanvasAPI]] — title: "CanvasAPI"
 - [[06 - Proyectos/CommitWear|CommitWear]] — title: "CommitWear"
+- [[06 - Proyectos/Foundation/Core - Sistema de Núcleo|Core — Sistema de Núcleo]] — Sistema de núcleo de Foundation. Extension Loader, Foundation Module, Infrastructure Module, config factories, y util...
+- [[06 - Proyectos/Foundation/Extensiones/CMS - Content Management System|CMS — Content Management System]] — Extensión CMS de Foundation. Content Management System completo con páginas, blog (posts, categorías, tags), SEO meta...
+- [[06 - Proyectos/Foundation/Extensiones/Landing - Paginas Publicas|Landing — Páginas Públicas]] — Extensión frontend de páginas públicas de Foundation. 15 componentes de marketing: hero, features, pricing, FAQ, test...
+- [[06 - Proyectos/Foundation/Extensiones/Sistema de Extensiones|Sistema de Extensiones — Foundation]] — Arquitectura completa del sistema de extensiones auto-descubribles de Foundation. Pipeline de 5 fases: discovery, man...
+- [[06 - Proyectos/Foundation/Extensiones/Stripe - Integracion de Pagos|Stripe — Integración de Pagos]] — Extensión Stripe de Foundation. Integración completa de Stripe: productos, precios, planes, suscripciones, checkout s...
+- [[06 - Proyectos/Foundation/Graphify - Knowledge Graph y OpenCode|Graphify — Knowledge Graph y OpenCode]] — Integración de Graphify con OpenCode. Cómo el knowledge graph analiza Foundation y el vault SOM-OS.dev, y cómo OpenCo...
+- [[06 - Proyectos/Foundation/Infraestructura - Base de Datos y Utilidades|Infraestructura — Base de Datos y Utilidades]] — Infraestructura de Foundation: configuración de TypeORM, migraciones, seeds, sistema de email (Nodemailer), y utilida...
+- [[06 - Proyectos/Foundation/Modulos/Billing - Facturacion|Billing — Facturación]] — Módulo placeholder de facturación en Foundation. Reservado para lógica de facturación futura. Actualmente vacío — la ...
+- [[06 - Proyectos/Foundation/Modulos/Communications - Comunicaciones y Email|Communications — Comunicaciones y Email]] — Sistema de comunicaciones de Foundation. Email transaccional con colas BullMQ + Redis, templates Handlebars compilado...
+- [[06 - Proyectos/Foundation/Modulos/Error Tracker - Monitoreo de Errores|Error Tracker — Monitoreo de Errores]] — Módulo full-stack de tracking de errores. Backend: deduplicación SHA256, GlobalExceptionFilter, notificaciones Telegr...
+- [[06 - Proyectos/Foundation/Modulos/IAM - Identity y Access Management|IAM — Identity & Access Management]] — Módulo full-stack de autenticación y autorización. Backend: 4 estrategias Passport, OAuth social, API Keys, RBAC. Fro...
+- [[06 - Proyectos/Foundation/Modulos/Storage - Sistema de Archivos|Storage — Sistema de Archivos]] — Módulo full-stack de gestión de archivos. Backend: sistema polimórfico con 3 drivers (local, S3, S3-presigned), Sharp...
+- [[06 - Proyectos/Foundation/Modulos/Translations - Internacionalizacion|Translations — Internacionalización]] — Módulo full-stack de internacionalización. Backend: CRUD de idiomas/traducciones en DB, generación JSON, traducción I...
+- [[06 - Proyectos/Foundation/Modulos/UI App - Toolkit de Componentes|UI App — Toolkit de Componentes]] — Toolkit de componentes UI de Foundation. Módulo solo frontend con DataTable (TanStack Table v8), 11 form components (...
+- [[06 - Proyectos/Foundation/Modulos/Users - Gestión de Usuarios|Users — Gestión de Usuarios]] — Módulo de gestión de usuarios de Foundation. CRUD completo con fotos de perfil polimórficas, estados activo/inactivo,...
 - [[06 - Proyectos/Foundation|Foundation]] — title: "Foundation"
 - [[06 - Proyectos/GenLegalTxts|GenLegalTxts]] — title: "GenLegalTxts"
 - [[06 - Proyectos/SOM Tap - Tarjeta de Visita Digital Inteligente|SOM Tap - Tarjeta de Visita Digital Inteligente]] — title: "Somos Tap - Tarjeta de Visita Digital Inteligente"
@@ -157,10 +190,11 @@ scope: vault
 
 - [[99 - Archivo/BREAFING_MARCA_0002 (1)|Briefing de Marca - Duplicado (Archivo)]] — 1. Concepto de marca  2. Propuesta de Naming  3. Taglines o slogans  4. Propuesta de valor  5.Público objetivo  6.Pun...
 
-## Conceptos (24)
+## Conceptos (26)
 
 - [[Conceptos/ADN - Tecnología-Tierra|ADN - Tecnología-Tierra]] — Concepto identitario que aterriza la innovación avanzada en la realidad empresarial tangible.
 - [[Conceptos/Arquetipo de Marca - El Arquitecto|Arquetipo de Marca - El Arquitecto]] — title: "Arquetipo de Marca - El Arquitecto"
+- [[Conceptos/Comparativa - Foundation vs TanStack Start|Comparativa - Foundation vs TanStack Start]] — Análisis comparativo entre Foundation (NestJS + Nuxt 3 monorepo) y TanStack Start + DB como stack para proyectos del ...
 - [[Conceptos/Concepto Central - De aislado a conectado|Concepto Central - De aislado a conectado]] — title: "Concepto Central - De aislado a conectado"
 - [[Conceptos/Concepto Central Actualizado - De componentes aislados a sistemas operativos inteligentes|Concepto Central Actualizado - De componentes aislados a sistemas operativos inteligentes]] — title: "Concepto Central Actualizado - De componentes aislados a sistemas operativos inteligentes"
 - [[Conceptos/Diferenciación - Inventor vs Técnico|Diferenciación - Inventor vs Técnico]] — title: "Diferenciación - Inventor vs Técnico"
@@ -180,6 +214,7 @@ scope: vault
 - [[Conceptos/Prompt Web - Sando Capital|Prompt Web — Sando Capital]] — Master prompt para generar la web de Sando Capital by Javier Sandoval Haro. Combinación del estilo Coocomaterial (pro...
 - [[Conceptos/Propuesta de Valor - Sistemas operativos empresariales|Propuesta de Valor - Sistemas operativos empresariales]] — title: "Propuesta de Valor - Sistemas operativos empresariales"
 - [[Conceptos/Público Objetivo - Empresarios B2B 25-45|Público Objetivo - Empresarios B2B 25-45]] — title: "Público Objetivo - Empresarios B2B 25-45"
+- [[Conceptos/Stack Actual - Inventario y Roadmap de Migración|Stack Actual — Inventario y Roadmap de Migración]] — Inventario completo de cada herramienta en Foundation con análisis de riesgo, recomendación de migración, y timeline....
 - [[Conceptos/Tagline - El sistema operativo de tu negocio|Tagline - El sistema operativo de tu negocio]] — title: "Tagline - El sistema operativo de tu negocio"
 - [[Conceptos/Tagline - Tecnología que une personas|Tagline - Tecnología que une personas]] — title: "Tagline - Tecnología que une personas"
 - [[Conceptos/Territorio Visual - Burbuja Nodo Sistema Vivo|Territorio Visual - Burbuja Nodo Sistema Vivo]] — title: "Territorio Visual - Burbuja Nodo Sistema Vivo"

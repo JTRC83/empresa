@@ -8,11 +8,14 @@
 empresa/
 ├── AGENTS.md              ← Knowledge Manager (reglas para la IA)
 ├── Vault-Index.md          ← Indice global auto-generado
-├── opencode.jsonc          ← Config de OpenCode (+ Qdrant MCP)
-├── package.json            ← Dependencias Node
+├── opencode.jsonc          ← Config de OpenCode
+├── package.json            ← Scripts Node
+├── graphify-out/           ← Knowledge graph (Graphify)
+│   ├── GRAPH_REPORT.md     ← God nodes, comunidades, conexiones
+│   ├── graph.json          ← Grafo completo (NetworkX)
+│   └── graph.html          ← Visualizacion interactiva
 ├── tools/
-│   ├── generate-index.mjs  ← Genera index.md por carpeta
-│   └── qdrant-sync.mjs     ← Sync vault ↔ Qdrant
+│   └── generate-index.mjs  ← Genera index.md por carpeta
 ├── 00 - Meta/              ← Indices, mapas, metadata
 ├── 01 - Diagnostico/       ← Retrato del negocio
 ├── 02 - Proceso Creativo/  ← 7 dias de introspeccion
@@ -39,11 +42,11 @@ npm install
 # 3. Arrancar (carga .env automaticamente)
 node start.mjs
 
-# 4. Levantar Qdrant (busqueda semantica)
-docker compose up -d
-
-# 5. Sync del vault a Qdrant (local, gratis, sin API key)
-EMBEDDING_PROVIDER=transformers node tools/qdrant-sync.mjs
+# 4. Regenerar knowledge graph (requiere Python + graphify)
+#    Ver graphify-out/GRAPH_REPORT.md para el grafo actual
+pip install graphifyy
+python graphify-out/vault_extract.py
+python graphify-out/vault_build.py
 ```
 
 ## Comandos
@@ -51,44 +54,14 @@ EMBEDDING_PROVIDER=transformers node tools/qdrant-sync.mjs
 | Comando | Que hace |
 |---------|----------|
 | `npm run index` | Regenera todos los index.md |
-| `npm run qdrant-sync` | Sincroniza vault con Qdrant |
-| `npm run qdrant-search` | Busqueda semantica (requiere query) |
-| `npm run qdrant-watch` | Watch mode: sync en tiempo real |
 
-## Busqueda semantica
+## Knowledge Graph (Graphify)
 
-```bash
-# Buscar en el vault
-EMBEDDING_PROVIDER=transformers node tools/qdrant-sync.mjs --search "propuesta de valor"
-
-# Con mas resultados
-EMBEDDING_PROVIDER=transformers node tools/qdrant-sync.mjs --search "concepto central" --limit=10
-```
-
-## Embedding providers
-
-El sync soporta 4 providers. Elegi uno con `EMBEDDING_PROVIDER`:
-
-| Provider | Donde corre | Costo | Requiere |
-|----------|------------|-------|----------|
-| `transformers` | Local | **Gratis** | `npm install` (una vez) |
-| `ollama` | Local | Gratis | `ollama pull nomic-embed-text` |
-| `openrouter` | Cloud | ~$0.0004/sync | `OPENROUTER_API_KEY` |
-| `openai` | Cloud | Estandar | `OPENAI_API_KEY` |
-
-### Ejemplos
-
-```bash
-# Transformers.js (recomendado)
-EMBEDDING_PROVIDER=transformers npm run qdrant-sync
-
-# Ollama
-ollama pull nomic-embed-text
-EMBEDDING_PROVIDER=ollama EMBEDDING_MODEL=nomic-embed-text npm run qdrant-sync
-
-# OpenRouter
-EMBEDDING_PROVIDER=openrouter OPENROUTER_API_KEY=sk-or-... npm run qdrant-sync
-```
+El vault tiene un **knowledge graph** generado con Graphify en `graphify-out/`:
+- **128 nodos, 355 edges, 12 comunidades**
+- **God nodes**: `index`, `Conceptos`, `Foundation`, `Atenfy`, `Propuesta de Valor`...
+- Abri `graphify-out/graph.html` en el browser para visualizacion interactiva
+- El Knowledge Manager usa `GRAPH_REPORT.md` como punto de entrada
 
 ## Indices automaticos
 
@@ -113,7 +86,7 @@ Para regenerar manualmente: `npm run index`
 Define al **Knowledge Manager** del vault. Reglas clave:
 
 1. **NUNCA leer archivos sin antes leer indices** (token efficiency)
-2. **Usar Qdrant** como primer paso de busqueda
+2. **Usar Graphify** como primer paso (god nodes, comunidades)
 3. **Crear conocimiento** siguiendo convenciones (frontmatter, wikilinks)
 4. **Investigar** con fuentes externas y sintetizar en notas nuevas
 
@@ -128,46 +101,33 @@ Invocable como sub-agente: `@knowledge-manager investiga el concepto central`
 
 ```json
 {
-  "@huggingface/transformers": ">=3",   // embeddings locales (transformers)
-  "@qdrant/js-client-rest": ">=1.13"   // cliente Qdrant
+  "node": ">=18"
 }
 ```
 
-## Docker / Qdrant
+## Graphify
 
-El vault usa Qdrant como motor de busqueda semantica. Se levanta con Docker Compose:
+El vault usa **Graphify** como knowledge graph. Se genera manualmente cuando cambia la estructura:
 
 ```bash
-# Arrancar (primera vez descarga la imagen)
-docker compose up -d
+# Instalar (una vez)
+pip install graphifyy
 
-# Ver logs
-docker compose logs -f
+# Extraer wikilinks + frontmatter
+python graphify-out/vault_extract.py
 
-# Frenar
-docker compose stop
-
-# Tirar todo y empezar de cero
-docker compose down -v
+# Build + cluster + report
+python graphify-out/vault_build.py
 ```
 
-El `docker-compose.yml` incluye:
-
-- Puerto `6333` (REST API) — para el sync y busqueda
-- Puerto `6334` (gRPC) — por si se necesita en el futuro
-- Volumen persistente `qdrant_data` — los embeddings sobreviven reinicios
-- `restart: unless-stopped` — se levanta solo con Docker
-
-Puertos por defecto (cambiables en `docker-compose.yml` y `QDRANT_URL`):
-
-| Variable | Default | Que es |
-|----------|---------|--------|
-| `QDRANT_URL` | `http://localhost:6333` | Endpoint REST de Qdrant |
-| `QDRANT_COLLECTION` | `obsidian-vault` | Nombre de coleccion |
+Resultados en `graphify-out/`:
+- `graph.json` — grafo completo (NetworkX node-link)
+- `graph.html` — visualizacion interactiva (abrir en browser)
+- `GRAPH_REPORT.md` — god nodes, comunidades, conexiones sorprendentes
 
 ## Requisitos
 
 - Node >= 18
-- Docker (para Qdrant)
+- Python >= 3.10 (para Graphify)
 - Obsidian (para editar el vault)
 - Git (pre-commit hook automatico)

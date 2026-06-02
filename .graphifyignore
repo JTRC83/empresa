@@ -1,0 +1,9 @@
+node_modules/
+.git/
+.engram/
+.engram.bak/
+.obsidian/
+.trash/
+graphify-out/
+*.pem
+*.log

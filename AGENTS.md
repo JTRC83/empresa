@@ -39,7 +39,7 @@ inicial hasta la arquitectura operativa de productos.
 Paso 1: Leer Vault-Index.md (mapa global del vault)
 Paso 2: Leer carpeta/index.md de la carpeta relevante
 Paso 3: SOLO AHORA leer archivos individuales si es necesario
-Paso 4: Si Qdrant está disponible, usar búsqueda semántica antes de leer
+Paso 4: Si Graphify está disponible → leer graphify-out/GRAPH_REPORT.md para god nodes y conexiones
 ```
 
 **Por qué**: Cada archivo .md puede consumir de 1K a 10K tokens.
@@ -51,57 +51,42 @@ Los índices comprimen esto en ~200-500 tokens. Es una reducción del 80-95%.
 |-----------------|------------|
 | "¿Qué hay en el vault?" | Solo `Vault-Index.md` |
 | "Hablame de los conceptos de naming" | `Conceptos/index.md` → leer solo los relevantes |
-| "¿Cómo se define SOM-OS.dev?" | Qdrant search "SOM-OS.dev definición" → leer top 3 |
+| "¿Cómo se define SOM-OS.dev?" | `graphify-out/GRAPH_REPORT.md` → god nodes → leer top 3 |
 | "Crear una nota sobre X" | Leer `Conceptos/index.md` para no duplicar, luego crear |
-| Investigación de un tema | Qdrant → index.md → archivos relevantes |
+| Investigación de un tema | Graphify god nodes → index.md → archivos relevantes |
 
 ---
 
-## Regla #2: Qdrant Semantic Search
+## Regla #2: Graphify Knowledge Graph
 
-Si Qdrant está configurado (`node tools/qdrant-sync.mjs --search "query"`),
-**siempre** úsalo como primer paso para encontrar notas relacionadas.
+El vault tiene un **knowledge graph generado por Graphify** en `graphify-out/`.
+Úsalo **siempre** como primer paso para entender la estructura del vault y encontrar
+conexiones no obvias entre conceptos.
 
-```bash
-# Buscar en el vault
-node tools/qdrant-sync.mjs --search "propuesta de valor sistemas operativos"
-
-# Buscar con más resultados
-node tools/qdrant-sync.mjs --search "arquetipo arquitecto" --limit=10
+```
+Paso 1: Leer graphify-out/GRAPH_REPORT.md (god nodes, surprising connections)
+Paso 2: Usar god nodes como punto de entrada para navegar el vault
+Paso 3: Seguir wikilinks entre notas para trazado de relaciones
 ```
 
-Si Qdrant **no está disponible** (primer uso, no configurado), salta este paso
-y usa los índices + grep de archivos para encontrar información relacionada.
+### Qué aporta Graphify
 
-### Configuración de Qdrant
+- **God nodes**: los 10 conceptos más conectados del vault. Punto de entrada ideal.
+- **Surprising connections**: conexiones cross-comunidad que no son obvias.
+- **Comunidades**: clusters de notas relacionadas (ej: "Conceptos", "Proyectos", "Modulos").
+- **graph.html**: visualización interactiva del grafo (abrir en browser).
 
-Para habilitar la búsqueda semántica:
+### Cómo se regenera
 
 ```bash
-# 1. Levantar Qdrant local (requiere Docker)
-docker run -p 6333:6333 qdrant/qdrant
-
-# 2. Instalar dependencias
-npm install
-
-# 3. Sync inicial (4 opciones de provider)
-
-#    A) Transformers.js (LOCAL, GRATIS, sin API key — RECOMENDADO)
-EMBEDDING_PROVIDER=transformers node tools/qdrant-sync.mjs
-
-#    B) Ollama (LOCAL, GRATIS, requiere servidor Ollama)
-ollama pull nomic-embed-text
-EMBEDDING_PROVIDER=ollama EMBEDDING_MODEL=nomic-embed-text node tools/qdrant-sync.mjs
-
-#    C) OpenRouter (CLOUD, barato, sin OpenAI)
-EMBEDDING_PROVIDER=openrouter OPENROUTER_API_KEY=sk-or-... node tools/qdrant-sync.mjs
-
-#    D) OpenAI (CLOUD)
-EMBEDDING_PROVIDER=openai OPENAI_API_KEY=sk-... node tools/qdrant-sync.mjs
-
-# 4. Búsqueda (mismo provider que sync)
-EMBEDDING_PROVIDER=transformers node tools/qdrant-sync.mjs --search "tu consulta"
+# Regenerar el grafo (requiere Python 3.10+ y graphify instalado)
+pip install graphifyy
+python graphify-out/vault_extract.py   # Extracción de wikilinks + frontmatter
+python graphify-out/vault_build.py     # Build + cluster + report
 ```
+
+El grafo se regenera manualmente cuando cambia significativamente la estructura del vault.
+No es necesario en cada commit — los índices cubren el día a día.
 
 ---
 
@@ -251,11 +236,10 @@ Leer Vault-Index.md → leer todos los index.md → detectar notas huérfanas �
 - `.obsidian/` config está en repo (excepto workspace.json, graph.json)
 
 ### Herramientas disponibles
-- `tools/generate-index.mjs` — generador de índices
-- `tools/qdrant-sync.mjs` — sync con Qdrant
-- `.opencode/obsidian-cli/` — CLI de Obsidian
-- `.opencode/obsidian-markdown/` — skill de markdown
-- `.opencode/defuddle/` — extracción de contenido web
+- `tools/generate-index.mjs` → regenera índices
+- `graphify-out/GRAPH_REPORT.md` → knowledge graph del vault
+- `.opencode/obsidian-markdown/` → skill de markdown Obsidian
+- `.opencode/defuddle/` → extracción de contenido web
 
 ---
 

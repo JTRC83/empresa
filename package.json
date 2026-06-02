@@ -5,15 +5,7 @@
   "type": "module",
   "scripts": {
     "index": "node tools/generate-index.mjs",
-    "qdrant-sync": "node tools/qdrant-sync.mjs",
-    "qdrant-search": "node tools/qdrant-sync.mjs --search",
-    "qdrant-watch": "node tools/qdrant-sync.mjs --watch"
-  },
-  "dependencies": {
-    "@huggingface/transformers": ">=3"
-  },
-  "devDependencies": {
-    "@qdrant/js-client-rest": ">=1.13"
+    "graphify": "python -m graphify"
   },
   "engines": {
     "node": ">=18"

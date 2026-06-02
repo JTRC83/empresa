@@ -9,6 +9,7 @@ folder: "Conceptos"
 ```
 ├── 📄 ADN - Tecnología-Tierra.md
 ├── 📄 Arquetipo de Marca - El Arquitecto.md
+├── 📄 Comparativa - Foundation vs TanStack Start.md
 ├── 📄 Concepto Central - De aislado a conectado.md
 ├── 📄 Concepto Central Actualizado - De componentes aislados a sistemas operativos inteligentes.md
 ├── 📄 Diferenciación - Inventor vs Técnico.md
@@ -28,6 +29,7 @@ folder: "Conceptos"
 ├── 📄 Prompt Web - Sando Capital.md
 ├── 📄 Propuesta de Valor - Sistemas operativos empresariales.md
 ├── 📄 Público Objetivo - Empresarios B2B 25-45.md
+├── 📄 Stack Actual - Inventario y Roadmap de Migración.md
 ├── 📄 Tagline - El sistema operativo de tu negocio.md
 ├── 📄 Tagline - Tecnología que une personas.md
 ├── 📄 Territorio Visual - Burbuja Nodo Sistema Vivo.md
@@ -37,6 +39,7 @@ folder: "Conceptos"
 
 - [[ADN - Tecnología-Tierra|ADN - Tecnología-Tierra]] — Concepto identitario que aterriza la innovación avanzada en la realidad empresarial tangible. `#ADN #marca #humanización #diferenciación`
 - [[Arquetipo de Marca - El Arquitecto|Arquetipo de Marca - El Arquitecto]] — title: "Arquetipo de Marca - El Arquitecto"
+- [[Comparativa - Foundation vs TanStack Start|Comparativa - Foundation vs TanStack Start]] — Análisis comparativo entre Foundation (NestJS + Nuxt 3 monorepo) y TanStack Start + DB como stack para proyectos del ecosistema SOM-OS.dev. `#investigacion #stack #comparativa #foundation #tanstack-start #arquitectura #decision-tecnica`
 - [[Concepto Central - De aislado a conectado|Concepto Central - De aislado a conectado]] — title: "Concepto Central - De aislado a conectado"
 - [[Concepto Central Actualizado - De componentes aislados a sistemas operativos inteligentes|Concepto Central Actualizado - De componentes aislados a sistemas operativos inteligentes]] — title: "Concepto Central Actualizado - De componentes aislados a sistemas operativos inteligentes"
 - [[Diferenciación - Inventor vs Técnico|Diferenciación - Inventor vs Técnico]] — title: "Diferenciación - Inventor vs Técnico"
@@ -56,6 +59,7 @@ folder: "Conceptos"
 - [[Prompt Web - Sando Capital|Prompt Web — Sando Capital]] — Master prompt para generar la web de Sando Capital by Javier Sandoval Haro. Combinación del estilo Coocomaterial (profesional con alma artesanal) con la paleta de marca de Sando Capital y la analogía central del agua/fluir. Incluye 7 calculadoras financieras interactivas. `#prompt #sando-capital #web #diseño #master-prompt #cocomaterial #calculadoras-financieras #javier-sandoval`
 - [[Propuesta de Valor - Sistemas operativos empresariales|Propuesta de Valor - Sistemas operativos empresariales]] — title: "Propuesta de Valor - Sistemas operativos empresariales"
 - [[Público Objetivo - Empresarios B2B 25-45|Público Objetivo - Empresarios B2B 25-45]] — title: "Público Objetivo - Empresarios B2B 25-45"
+- [[Stack Actual - Inventario y Roadmap de Migración|Stack Actual — Inventario y Roadmap de Migración]] — Inventario completo de cada herramienta en Foundation con análisis de riesgo, recomendación de migración, y timeline. Clasificación: mantener, migrar pronto, migrar a largo plazo, reemplazar ya. `#stack #inventario #migracion #roadmap #fundacion #deuda-tecnica #arquitectura`
 - [[Tagline - El sistema operativo de tu negocio|Tagline - El sistema operativo de tu negocio]] — title: "Tagline - El sistema operativo de tu negocio"
 - [[Tagline - Tecnología que une personas|Tagline - Tecnología que une personas]] — title: "Tagline - Tecnología que une personas"
 - [[Territorio Visual - Burbuja Nodo Sistema Vivo|Territorio Visual - Burbuja Nodo Sistema Vivo]] — title: "Territorio Visual - Burbuja Nodo Sistema Vivo"

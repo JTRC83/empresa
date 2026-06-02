@@ -17,7 +17,8 @@ const ROOT = join(__dirname, '..')
 
 const EXCLUDE_DIRS = new Set([
   '.git', '.obsidian', '.opencode', '.atl', '.engram',
-  'node_modules', 'tools', '__pycache__', '.DS_Store'
+  'node_modules', 'tools', '__pycache__', '.DS_Store',
+  'graphify-out', 'archivos'
 ])
 
 const EXCLUDE_FILES = new Set([
