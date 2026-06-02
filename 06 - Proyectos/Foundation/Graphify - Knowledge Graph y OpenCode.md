@@ -115,6 +115,77 @@ python graphify-out/vault_build.py
 
 ## Integración con OpenCode
 
+### Pipeline Automático (Git Hooks)
+
+Foundation tiene **3 hooks de Git** que mantienen el knowledge graph actualizado sin intervención manual:
+
+```mermaid
+graph TB
+    subgraph precommit["pre-commit (cada commit)"]
+        G1["graphify.watch._rebuild_code()<br/>AST extraction de cambios staged"]
+        G2["bin/sync-docs.js<br/>regenera ARCHITECTURE.md + AGENTS.md"]
+        G3["engram sync<br/>exporta memorias a .engram/"]
+    end
+
+    subgraph postcheckout["post-checkout (cambio de branch)"]
+        C1["graphify rebuild (code only)"]
+        C2["sync-docs"]
+        C3["engram sync --import"]
+    end
+
+    subgraph postmerge["post-merge (merge/pull)"]
+        M1["engram sync --import"]
+        M2["sync-docs"]
+    end
+
+    subgraph outputs["Outputs"]
+        O1["graphify-out/graph.json<br/>+ GRAPH_REPORT.md"]
+        O2["docs/ARCHITECTURE.md<br/>+ AGENTS.md"]
+        O3[".engram/"]
+    end
+
+    G1 --> O1
+    G2 --> O2
+    G3 --> O3
+    C1 --> O1
+    C2 --> O2
+    C3 --> O3
+    M1 --> O3
+    M2 --> O2
+```
+
+#### 1. `graphify.watch._rebuild_code()` — Knowledge Graph
+
+Se ejecuta en **pre-commit** y **post-checkout**. Usa solo AST extraction (sin LLM):
+- Detecta archivos staged → extrae clases, funciones, imports
+- Resuelve imports cross-file → edges INFERRED
+- `git add graphify-out/` → el grafo se commitea junto con el código
+
+**Por eso el grafo siempre está actualizado** — cada commit regenera la parte de código. No consume tokens de LLM.
+
+#### 2. `bin/sync-docs.js` — Documentación
+
+Escanea `docs/modules/`, `docs/extensions/`, `docs/custom/`, `docs/research/`:
+- Parsea YAML frontmatter de cada .md
+- Genera `docs/ARCHITECTURE.md` con diagrama de dependencias
+- Actualiza `AGENTS.md` con índices de módulos
+
+#### 3. `engram sync` — Memoria Persistente
+
+Exporta/importa memorias entre `.engram/` y la base de datos de Engram. Sincroniza en commits, branch switches y merges.
+
+### `bin/enrich-graph.py` — Conexiones Back-Front
+
+Post-procesa `graph.json` agregando edges de **@-alias imports** desde `tsconfig.json`:
+
+```python
+# Descubre todos los tsconfig en apps/ y packages/
+# Resuelve aliases (ej: @iam → modules/iam/)
+# Agrega edges entre archivos que usan el mismo alias
+```
+
+Esto es lo que **conecta backend y frontend**: cuando `apps/back/src/modules/translations/` y `apps/front/modules/base/translations/` comparten imports o configuraciones, el grafo los agrupa en la misma comunidad.
+
 ### Plugin graphify.js
 
 Foundation tiene el plugin `.agents/plugins/graphify.js` que se ejecuta **antes de cada comando bash**:
@@ -187,20 +258,25 @@ Si `graphify-out/` no existe o está vacío:
 - OpenCode usa índices (`Vault-Index.md` + `index.md`) como fallback
 - No hay penalización — simplemente no hay grafo disponible
 
-### Regeneración
+### Regeneración (Automática)
 
-El grafo **no se regenera automáticamente** en commits. Se regenera manualmente cuando cambia significativamente la estructura:
+El grafo **se regenera automáticamente** en cada commit via pre-commit hook. No se requiere intervención manual.
 
 ```bash
-# En Foundation — re-build desde el grafo existente (sin re-extraer)
-python graphify-out/rebuild.py
+# El pre-commit hook ejecuta:
+# 1. graphify.watch._rebuild_code() — AST de cambios staged
+# 2. bin/sync-docs.js — regenera ARCHITECTURE.md
+# 3. engram sync — exporta memorias
 
-# Para regenerar desde cero (requiere subagentes LLM, ~26 agentes)
-/graphify C:\proyectos\foundation
+# También se actualiza al cambiar de branch (post-checkout)
+# y después de merge/pull (post-merge)
 ```
 
-> [!tip] Foundation ya tiene su grafo ejecutado
-> El pipeline se ejecutó sobre los 565 archivos de Foundation (`.ts`, `.vue`, `.md`). El resultado: 1640 nodos, 1913 edges, 184 comunidades. El grafo **conecta backend y frontend** por dominio funcional — por ejemplo, `TranslationsController` (NestJS) y `InteractiveTranslationEditor.vue` (Vue) aparecen en la misma comunidad porque comparten la API `/translations`.
+Para regenerar manualmente todo el grafo desde cero:
+
+```bash
+/graphify C:\proyectos\foundation
+```
 
 ---
 

@@ -62,11 +62,11 @@ graph LR
 
 ### Cómo funciona
 
-1. **Graphify analiza Foundation** — extrae wikilinks, AST de código (clases, imports), y frontmatter. Genera un grafo con 1640 nodos, 1913 edges y 184 comunidades.
+1. **Graphify analiza Foundation en cada commit** — el pre-commit hook ejecuta `graphify.watch._rebuild_code()` que extrae AST de los cambios staged y actualiza `graph.json`. También corre `bin/enrich-graph.py` para conectar back-front via @-alias imports de tsconfig. Resultado: 1640 nodos, 1913 edges.
 
-2. **El plugin `graphify.js`** — antes de cada comando bash en Foundation, OpenCode recibe un recordatorio: `"[graphify] Knowledge graph available. Read graphify-out/GRAPH_REPORT.md for god nodes and architecture context."`
+2. **`bin/sync-docs.js` regenera la documentación** — escanea `docs/modules/` y genera `docs/ARCHITECTURE.md` desde YAML frontmatter. También actualiza `AGENTS.md`.
 
-3. **OpenCode consulta el grafo** — en lugar de leer 565 archivos (~212K palabras), lee `GRAPH_REPORT.md` para encontrar los god nodes (conceptos más conectados) y desde ahí navega por el código vía wikilinks e imports. Reducción de tokens: ~95%.
+3. **OpenCode consulta el grafo** — el plugin `graphify.js` recuerda leer `graphify-out/GRAPH_REPORT.md`. En lugar de leer 565 archivos (~212K palabras), lee los god nodes y desde ahí navega por el código vía imports y wikilinks. Reducción de tokens: ~95%.
 
 ### Estado actual
 
